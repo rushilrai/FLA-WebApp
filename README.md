@@ -17,7 +17,7 @@ git clone https://github.com/:username/FLA-WebApp
 
 ```bash
 cd client-app
-``` 
+```
 
 * Install all `npm` libraries.
 
@@ -39,7 +39,7 @@ npm start
 
 ```bash
 cd server-api
-``` 
+```
 
 * Install all `pip` libraries.
 
