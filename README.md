@@ -58,4 +58,4 @@ python app.py
 ## Schema
 
 * The API is capable of simulating FA Models (currently NFA and DFA).
-* The input schema for requests to the API can be found at [SCHEMA.md](https://github.com/mihirs16/FLA-WebApp/blob/master/SCHEMA.md).
+* The input schema for requests to the API can be found at [SCHEMA.md](https://github.com/rushilrai/FLA-WebApp/blob/master/SCHEMA.md).
