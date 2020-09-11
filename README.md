@@ -4,8 +4,8 @@ Flask-React Web Application for simulating Finite Automata.
 
 ## Getting Started
 
-* Fork this repository.
-* Clone your repository forked from this one.
+* Fork this repository
+* Clone your repository forked from this one
 
 ```bash
 git clone https://github.com/:username/FLA-WebApp
