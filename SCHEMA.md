@@ -4,14 +4,13 @@
 
 ```json
 {
-    "inputs": [...],
-    "states": [...],
+    "inputs": [],
+    "states": [],
     "inputstate": ,
-    "finalstates": [...],
+    "finalstates": [],
     "transit-table": {
-        "": [...],
-        "": [...],
-        ...
+        "": [],
+        "": [],
     }
 }
 ```
@@ -30,14 +29,13 @@
 
 ```json
 {
-    "inputs": [...],
-    "states": [...],
+    "inputs": [],
+    "states": [],
     "inputstate": ,
-    "finalstates": [...],
+    "finalstates": [],
     "transit-table": {
-        "": [...],
-        "": [...],
-        ...
+        "": [],
+        "": [],
     }
 }
 ```
