@@ -17,6 +17,8 @@ def defaultEndpoint():
             "GET /",
             "GET /dfa",
             "GET /nfa",
+            "GET /download-model",
+            "POST /upload-model"
         ]
     }
     return jsonify(defaultResponse)
@@ -36,6 +38,16 @@ def nfa():
         "output": 1
     }
     return jsonify(dfaOutput)
+
+# # download automata models
+# @app.route('/download-model', methods=['POST'])
+# def downloadModel():
+#     return None
+
+# # upload ext models
+# @app.route('/upload-model', methods=['POST'])
+# def uploadModel():
+#     return None
 
 # app run
 if __name__ == '__main__':
