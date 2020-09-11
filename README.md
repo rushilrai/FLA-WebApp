@@ -8,7 +8,7 @@ Flask-React Web Application for simulating Finite Automata.
 * Clone your repository forked from this one
 
 ```bash
-    git clone https://github.com/:username/FLA-WebApp
+git clone https://github.com/:username/FLA-WebApp
 ```
 
 ### React Frontend
@@ -16,19 +16,19 @@ Flask-React Web Application for simulating Finite Automata.
 * To run the React-based frontend change directory to `client-app`.
 
 ```bash
-    cd client-app
+cd client-app
 ``` 
 
 * Install all `npm` libraries.
 
 ```bash
-    npm install
+npm install
 ```
 
 * Run the included development server.
 
 ```bash
-    npm start
+npm start
 ```
 
 * You can view the frontend at `localhost:3000/` in your browser.
@@ -38,19 +38,19 @@ Flask-React Web Application for simulating Finite Automata.
 * To run the Flask-based backend API change directory to `server-api`.
 
 ```bash
-    cd server-api
+cd server-api
 ``` 
 
 * Install all `pip` libraries.
 
 ```bash
-    pip install requirements.txt
+pip install requirements.txt
 ```
 
 * Run the included development server.
 
 ```bash
-    python app.py
+python app.py
 ```
 
 * You can view the frontend at `localhost:5000/` in your browser.
@@ -58,4 +58,4 @@ Flask-React Web Application for simulating Finite Automata.
 ## Schema
 
 * The API is capable of simulating FA Models (currently NFA and DFA).
-* The input schema for requests to the API can be found at ![SCHEMA.md]().
+* The input schema for requests to the API can be found at [SCHEMA.md](https://github.com/mihirs16/FLA-WebApp/blob/master/SCHEMA.md).
