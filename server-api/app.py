@@ -1,5 +1,6 @@
 # module imports
 from utils import message, debug
+from finite_automata import DFA, NFA
 
 # flask imports
 from flask import Flask, request, render_template, jsonify
@@ -15,8 +16,8 @@ def defaultEndpoint():
     defaultResponse = {
         "all-endpoints": [
             "GET /",
-            "GET /dfa",
-            "GET /nfa",
+            "POST /dfa",
+            "POST /nfa",
             "GET /download-model",
             "POST /upload-model"
         ]
@@ -24,18 +25,24 @@ def defaultEndpoint():
     return jsonify(defaultResponse)
 
 # dfa route | returns string accepted by given model or not
-@app.route('/dfa', methods=['GET'])
+@app.route('/dfa', methods=['POST'])
 def dfa():
+    dfa_recv = request.json
+    dfa = DFA(dfa_recv['model'])
+    accepted = dfa.checkInput(dfa_recv['input'])
     dfaOutput = {
-        "output": 1
+        "output": accepted
     }
     return jsonify(dfaOutput)
 
 # nfa route | returns string accepted by given model or not
-@app.route('/nfa', methods=['GET'])
+@app.route('/nfa', methods=['POST'])
 def nfa():
+    nfa_recv = request.json
+    nfa = NFA(nfa_recv['model'])
+    accepted = nfa.checkInput(nfa_recv['input'])
     dfaOutput = {
-        "output": 1
+        "output": accepted
     }
     return jsonify(dfaOutput)
 
