@@ -25,3 +25,6 @@ yarn-error.log*
 # python cache
 server-api/__pycache__
 server-api/venv
+
+# vscode
+.vscode/
