@@ -1,6 +1,6 @@
 # FLA Web Application
 
-React-based Web Application for simulating FA Models.
+Web Application for simulating FA Models.
 
 ## Getting Started
 
@@ -10,28 +10,6 @@ React-based Web Application for simulating FA Models.
 ```bash
 git clone https://github.com/:username/FLA-WebApp
 ```
-
-### React Frontend
-
-* To run the React-based frontend change directory to `client-app`.
-
-```bash
-cd client-app
-```
-
-* Install all `npm` libraries.
-
-```bash
-npm install
-```
-
-* Run the included development server.
-
-```bash
-npm start
-```
-
-* You can view the frontend at `localhost:3000/` in your browser.
 
 ## Schema
 
