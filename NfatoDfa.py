@@ -11,7 +11,7 @@ for i in range(n):
     for j in range(t):
         path = input("path : ")               #Enter path eg : a or b in {a,b} 0 or 1 in {0,1}
         print("Enter end state from state {} travelling through path {} : ".format(state,path))
-        reaching_state = [x for x in input().split()]  #Enter all the end states that 
+        reaching_state = [x for x in input().split()]  #Enter all the end states  
         nfa[state][path] = reaching_state     #Assigning the end states to the paths in dictionary
 
 print("\nNFA :- \n")
