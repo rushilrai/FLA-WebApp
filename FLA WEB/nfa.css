@@ -22,11 +22,12 @@ h1{
     z-index: 10;
     position: fixed;
     font-family: 'Open Sans', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 1px;
     padding: 25px;
     width: 100vw;
-    background: #4e4e4e;
+    /* background: #4e4e4e; */
+    background: #ffcccc;
   }
 
   
@@ -34,10 +35,11 @@ h1{
     margin-right: 65px;
     margin-left: 60px;
     /* color: #cfc1ff; */
-    color: #ffcccc;
+    /* color: #ffcccc; */
+    color: #666666;
     text-decoration: none;
     border-bottom: 0px solid transparent;
-    font-weight: 200;
+    font-weight: 400;
   }
   a:hover,
   a:focus {
@@ -60,8 +62,8 @@ h1{
     margin: 3.8% 0% 0% 0%;
     /* box-shadow: 0 10px 15px rgba(0,0,0,0.8); */
     /* background: #d8ccff; */
-    background: #ffcccc;
-    
+    /* background: #ffcccc; */
+    background: #6d6d6d;
     /* border-radius: 10px; */
     /* flex-basis: 50%; */
     height: 57.8em;
@@ -73,9 +75,69 @@ h1{
 .column.side{
   background: white;
   color: black;
-  width: 70%;
+  width: 60%;
 }
 .column.first{
-    width: 30%;
+  color: #ffffff;
+    width: 40%;
+
+}
+.dfa1{
+  margin-left: 10%;
+  margin-right: 9%;
+  margin-top: 6.2%;
+  height: 48.3em;
+  display: flex;
+    background: rgb(255, 255, 255);
+    /* flex-direction: column; */
+    align-items: left;
+    overflow-y: scroll;
+    /* vertical-align: text-top; */
+    /* border-radius: 40px; */
+    /* box-shadow: 0 10px 30px 10px rgba(0,0,0, 0.4); */
+    border: 20px solid #ffcccc;
+  }
+    .form-group{
+      height: 100px;
+      
+  }
+  label{
+      position: relative;
+      font-size: 30px;
+      /* width: 100; */
+      text-align: center;
+      margin: 20% 5% 0% 5%;
+      margin-top: auto;
+      margin-left: 18%;
+      font-family: 'Open Sans', sans-serif;
+      color: #6d6d6d;
+      /* color: #ffcccc; */
+}
+input{
+  height: 45px;
+  padding: 5px 5px;
+  border: 3px solid #ffcccc;
+  /* border: 3px solid #6d6d6d; */
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+  margin-left: 15%;
+  color: #a59b9b;
+  font-size: 30px;
+  width: 73%;
+  font-family: 'Open Sans', sans-serif;
+}
+.shift{
+  margin-top: 20%;
+}
+.bored{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* border: 3px solid #ffcccc; */
+  height: 48.3em;
+  /* border-radius: 30px; */
+    border: 3px solid #6d6d6d;
 
 }

@@ -21,7 +21,8 @@ h1{
   p{
     font-size: 1.5em;
     line-height: 40px;
-    color: #727272;
+    /* color: #727272; */
+    color: #d18889;
     font-family: 'Comfortaa', 'sans-serif';
     text-align: justify;
     margin: 5% 8% 0% 8%;
@@ -117,14 +118,14 @@ h1{
       color:#6e6e6e;
       background-color: rgb(255, 245, 245);
       border: 0px solid #3a3a3a;
-      border-radius: 10px;
+      border-radius: 15px;
       height: 2em;
       width: 20%;
       justify-content: center;
       font-family: 'Open sans', sans-serif;
       font-size: 30px;
       letter-spacing: 2px;
-      margin: 13em 1.5em 0% ;
+      margin: 2em 1.6em 0% ;
   }
   .button1:hover{
       filter: brightness(100%);
@@ -141,20 +142,20 @@ h1{
     border: 0px solid #3a3a3a;
     background: #ffcccc;
     color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     height: 2em;
     width: 20%;
     justify-content: center;
     font-family: 'Open sans', sans-serif;
     font-size: 30px;
     letter-spacing: 2px;
-    margin-top: 13em;
-    margin-left: 770px;
+    margin-top: 2em;
+    margin-left: 25.3em;
 }
 .button2:hover{
     filter: brightness(100%);
     color:#ffcccc;
-    background-color:#4e4e4e;
+    background-color:#646262;
     
 }
 .button2:focus{
@@ -163,12 +164,19 @@ h1{
 button:active{
   transform: translate(0, 0.3rem);
 }
-/* .faa{
-  margin: px 20px px 20px;
+.faa{
+  margin: 4% 5% 0px 5%;
   background-color: white;
-  width: 50%;
-  height: 400px;
-  overflow: scroll;
-} */
+  width: 90%;
+  height: 38em;
+  overflow-y: scroll;
+} 
+.faa1{
+  margin: 4% 5% 0px 5%;
+  background-color: #ffcccc;
+  width: 90%;
+  height: 37.7em;
+  overflow-y: scroll;
+} 
 
   

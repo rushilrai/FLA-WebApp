@@ -23,7 +23,7 @@ h1{
     z-index: 10;
     position: fixed;
     font-family: 'Open Sans', sans-serif;
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 1px;
     padding: 25px;
     width: 100vw;
@@ -38,7 +38,7 @@ h1{
     color: #ffcccc;
     text-decoration: none;
     border-bottom: 0px solid transparent;
-    font-weight: 200;
+    font-weight: 400;
   }
   a:hover,
   a:focus {
@@ -71,9 +71,63 @@ h1{
     padding: 10px 10px;
   }
 .column.first{
-  width: 30%;
+  width: 40%;
 }
 .column.side{
   background: white;
+  width: 60%;
+}
+/* #form{
   width: 70%;
+} */
+.dfa1{
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 47em;
+  display: flex;
+    background: rgb(255, 255, 255);
+    /* flex-direction: column; */
+    align-items: left;
+    /* vertical-align: text-top; */
+    /* border-radius: 40px; */
+    overflow-y: inherit;
+    /* box-shadow: 0 10px 30px 10px rgba(0,0,0, 0.4); */
+  }
+    .form-group{
+      height: 100px;
+  }
+  label{
+      position: relative;
+      font-size: 30px;
+      /* width: 100; */
+      text-align: center;
+      margin: 20% 5% 0% 5%;
+      margin-top: auto;
+      margin-left: 18%;
+      font-family: 'Open Sans', sans-serif;
+      color: #6d6d6d;
+}
+input{
+  height: 45px;
+  padding: 5px 5px;
+  border: 3px solid #ffcccc;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+  margin-left: 18%;
+  font-size: 30px;
+  width: 73%;
+  font-family: 'Open Sans', sans-serif;
+}
+.shift{
+  margin-top: 20%;
+}
+.bored{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 3px solid #ffcccc;
+  height: 48.3em;
+  /* border-radius: 30px; */
 }

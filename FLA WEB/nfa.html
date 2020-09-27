@@ -7,7 +7,7 @@
     <link rel="stylesheet" href = 'nfa.css'>
     <style>
         #n1{
-            color: black;
+            color: rgb(255, 253, 253);
         }
     </style>
 </head>
@@ -26,12 +26,40 @@
         <div class="row">
             <div class="column side">
                 <div class="card">
-                    <h1 id="n1">OUTPUT</h1>
+                    <!-- <h1 id="n1">OUTPUT</h1> -->
+                    <div class="bored"></div>
                 </div>
             </div>
             <div class="column first" id = "n2">
                 <div class="card">
-                    <h1 id="n1">USER INPUT</h1>
+                    <!-- <h1 id="n1">USER INPUT</h1> -->
+                    <div class="dfa1">
+                        <div class="shift">
+                    <form id='form'>
+                        <div class="form-group">
+                            <label for="number" >Input</label><br>
+                            <input type="text" placeholder="010"
+                                    required pattern= "[0-3]" 
+                                    required minlength="1" maxlength="10">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" >Input States</label><br>
+                            <input type="text"  placeholder="ABC" 
+                                    required pattern="[0-9]{10}">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" >Final States</label>
+                            <input type="type"  placeholder="D"
+                                    required name = "">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" >Transition Table</label>
+                            <input type="text"  placeholder="NO IDEA"
+                                    required name = "email"><br>
+                        </div>
+                        </form>
+                        </div>
+                    </div>
                 </div>    
             </div>
         </div>
