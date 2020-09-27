@@ -3,12 +3,11 @@
 
 html {
     box-sizing: border-box;
-    height: 100%;
 }
 
 body {
     margin: 0;
-    /* min-height: 100vh ; */
+    min-height: 100vh ;
     background-color: white;
 }
 h1{
@@ -27,14 +26,14 @@ h1{
     letter-spacing: 1px;
     padding: 25px;
     width: 100vw;
-    background: #6d6d6d;
+    background: #4e4e4e;
   }
 
   
   a {
     margin-right: 65px;
     margin-left: 60px;
-    /* color: #c5fff2; */
+    /* color: #cfc1ff; */
     color: #ffcccc;
     text-decoration: none;
     border-bottom: 0px solid transparent;
@@ -60,20 +59,23 @@ h1{
 .column{
     margin: 3.8% 0% 0% 0%;
     /* box-shadow: 0 10px 15px rgba(0,0,0,0.8); */
-    /* background: #dafeff; */
-    background-color: #ffcccc;
-
+    /* background: #d8ccff; */
+    background: #ffcccc;
+    
     /* border-radius: 10px; */
     /* flex-basis: 50%; */
     height: 57.8em;
+
   }
   .card{
     padding: 10px 10px;
   }
-.column.first{
-  width: 30%;
-}
 .column.side{
   background: white;
+  color: black;
   width: 70%;
+}
+.column.first{
+    width: 30%;
+
 }

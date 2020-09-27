@@ -7,7 +7,7 @@
     <link rel="stylesheet" href = 'style.css'>
     <style>
         #n1{
-            color: black;
+            color: #fcaeae;
         }
     </style>
 </head>
@@ -15,12 +15,12 @@
     <div>
         <nav id="nav">
             <div class="container">
-                <div>
-                <a href="index.html">INTRODUCTION</a>
+                <div class="new">
+                
+                </div>
+                <div class="new1">
                 <a href="dfa.html">DFA</a>
                 <a href="nfa.html">NFA</a>
-                </div>
-                <div>
                 <a href="about.html">ABOUT US</a>
                 </div>
         </div>
@@ -28,26 +28,34 @@
         <div class="row">
             <div class="column">
                 <div class="card">
-                    <div>
-                        <h1>What is DFA?</h1>
+                    <div><div>
+                        <h1><u>Deterministic Finite Automaton </u></h1></div>
+                        <div class="faa">
                         <p>
                             In the theory of computation, a branch of theoretical computer science, a deterministic finite automaton (DFA)—also known as deterministic finite acceptor (DFA), deterministic finite-state machine (DFSM), or deterministic finite-state automaton (DFSA)—is a finite-state machine that accepts or rejects a given string of symbols, by running through a state sequence uniquely determined by the string.
-                        </p>
-                    </div>
-                    <div>
-                        <form class="form" method = "get" action="">
-                        <button class = "button1" onclick="get()">Go to DFA
+                        </p></div>
+                        <div>
+                        <form class="form" method = "get" action="dfa.html">
+                        <button class = "button1" onclick="get()">DFA
                         </button>
                         </form>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="column side">
                 <div class="card">
-                    <h1 id="n1">What is NFA?</h1>
-                    <p id="n1">
+                    <div>
+                        <h1 id="n1"><u>Non-deterministic Finite Automaton</u></h1>
+                        <p id="n1">
                         In automata theory, a finite-state machine is called a deterministic finite automaton (DFA), if each of its transitions is uniquely determined by its source state and input symbol, and reading an input symbol is required for each state transition. A nondeterministic finite automaton (NFA), or nondeterministic finite-state machine, does not need to obey these restrictions. In particular, every DFA is also an NFA. 
                     </p>
+                    <div>
+                        <form class="form" method = "get" action="nfa.html">
+                        <button class = "button2" onclick="get()">NFA
+                        </button>
+                        </form>
+                    </div>
                 </div>    
             </div>
         </div>
