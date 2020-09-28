@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: 0px 0px 0px 0px;
     /* min-height: 90vh ; */
     background-color: white;
 }
@@ -130,7 +130,7 @@ h1{
   .button1:hover{
       filter: brightness(100%);
       background:  #4e4e4e;
-      color: #ffcccc;
+      color: #ffffff;
       
   }
   .button1:focus{
