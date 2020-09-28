@@ -27,16 +27,7 @@ p {
   text-align: justify;
   margin: 5% 8% 5% 8%;
 }
-/* nav {
-    z-index: 10;
-    position: fixed;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 27px;
-    letter-spacing: 2px;
-    padding: 35px;
-    width: 100vw;
-    background: rgb(255 255 255 / 50%);
-  } */
+
 nav {
   z-index: 9;
   position: fixed;
@@ -70,32 +61,24 @@ a:focus {
 .container {
   display: flex;
   justify-content: space-between;
-  /* margin-right: 40px; */
 }
 .row {
-  /* max-width: 100%;
-    width: 200%; */
-  /* margin: 0 auto ; */
   display: flex;
+  height: auto;
 }
 .column {
-  /* box-shadow: 0 10px 15px rgba(0,0,0,0.8); */
   background: #ffcccc;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  /* border-radius: 40px; */
-  /* flex-basis: 50%; */
-  /* height: 900px; */
-  /* /* width: 100%; */
-  /* max-height: 100%; */
-  height: fit-content;
+  height: 100vh;
   width: 50%;
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
 }
 .columnside {
   box-shadow: none;
   background: white;
   width: 50%;
+  
 }
 .card {
   padding: 10px 10px;
