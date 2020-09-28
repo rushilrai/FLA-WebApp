@@ -77,11 +77,13 @@ a:focus {
     width: 200%; */
   /* margin: 0 auto ; */
   display: flex;
-  height: auto;
 }
 .column {
   /* box-shadow: 0 10px 15px rgba(0,0,0,0.8); */
   background: #ffcccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   /* border-radius: 40px; */
   /* flex-basis: 50%; */
   /* height: 900px; */
