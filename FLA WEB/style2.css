@@ -35,7 +35,7 @@ nav {
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
   letter-spacing: 1px;
-  padding: 3.5vh;
+  padding: 3vh;
   width: 100%;
   background: #727272;
 }
@@ -107,6 +107,9 @@ a:focus {
   background: #4e4e4e;
   color: #ffffff;
 }
+.button1:focus{
+  outline: none;
+}
 .button2 {
   cursor: pointer;
   /* border: 0px solid #3a3a3a; */
@@ -125,6 +128,9 @@ a:focus {
   color: #ffcccc;
   background-color: #646262;
   border: none;
+}
+.button2:focus{
+  outline: none;
 }
 .buttonrow1 {
   display: flex;
