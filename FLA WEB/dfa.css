@@ -69,15 +69,19 @@ h1{
     /* flex-basis: 50%; */
     /* height: 57.8em; */
   }
-  .card{
-    padding: 10px 10px;
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* min-width: 500px; */
+    min-height: 80vh;
   }
 .column.first{
-  width: 40%;
+  width: 35%;
 }
 .column.side{
   background: white;
-  width: 60%;
+  width: 65%;
 }
 /* #form{
   width: 70%;
@@ -95,6 +99,7 @@ h1{
     overflow-y: inherit;
     /* box-shadow: 0 10px 30px 10px rgba(0,0,0, 0.4); */
     border: 4px solid #6d6d6d;
+    overflow-y: scroll;
   }
     .form-group{
       height: 100px;
@@ -106,7 +111,7 @@ h1{
       text-align: center;
       margin: 20% 5% 0% 5%;
       margin-top: auto;
-      margin-left: 18%;
+      margin-left: 7vh;
       font-family: 'Open Sans', sans-serif;
       color: #6d6d6d;
 }
@@ -117,13 +122,13 @@ input{
   border-radius: 5px;
   outline: none;
   box-sizing: border-box;
-  margin-left: 18%;
+  margin-left: 7vh;
   font-size: 30px;
   width: 73%;
   font-family: 'Open Sans', sans-serif;
 }
 .shift{
-  margin-top: 20%;
+  margin-top: 10%;
 }
 .bored{
   margin-top: 5%;
@@ -134,8 +139,25 @@ input{
   height: 48.3em;
   /* border-radius: 30px; */
 }
-.classless{
+.cute{
   width: inherit;
   /* justify-items: center; */
-  margin-left: 50%;
+  margin-left: 6vh;
+}
+.svgbutton{
+  border: 0px solid transparent;
+  background: transparent;
+}
+.svgbutton:hover{
+    /* filter: brightness(140%); */
+    /* color: black; */
+}
+
+.svgbutton:active{
+    transform: translate(0, 0.3rem);
+    /* box-shadow: 0 0.1rem rgba(255,255, 255, 0.65);s */
+}
+
+.svgbutton:focus{
+  outline: none;
 }
