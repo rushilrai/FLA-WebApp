@@ -1,7 +1,7 @@
-function createNewElement() {
-    var txtNewInputBox = document.createElement('div');
-    txtNewInputBox.innerHTML = "<input type='text' id='newInputBox'>";
-    document.getElementById("newElementId").appendChild(txtNewInputBox);
+function addInput() {
+    inputs.push(document.getElementById('input').value);
+    document.getElementById('inputs').innerHTML = inputs
+    console.log(inputs.length);
 }
 function createNewElement2() {
     var txtNewInputBox2 = document.createElement('div');
@@ -14,3 +14,4 @@ function createNewElement3() {
     document.getElementById("newElementId3").appendChild(txtNewInputBox3);
 }
 
+let inputs = [];

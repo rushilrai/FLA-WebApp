@@ -30,25 +30,24 @@
         </nav>
         <div class="row">
             <div class="column first">
-                <div class="card">
-                    <h1>USER INPUT
-                    </h1>
-                    <div class="dfa1">
-                        <div class="shift">
-                                <div class="form-group">
-                                    <label for="name">Input</label>
-                                    <input type="text" id="name1" placeholder="" name="name" required minlength="3"
-                                        maxlength="100">
-                                </div>
-                                <div id="newElementId"></div>
-                                <div class="cute">
-                                    <button class="svgbutton" onclick="createNewElement()" >
+                <h1>USER INPUT
+                </h1>
+                <div class="dfa1">
+                    <div class="shift">
+                        <div class='input-row'>
+                            <div class="form-group">
+                                <label id="inputLabel">Inputs</label>
+                                <input type="number" id="input" value="0" name="name" maxlength="1" min="0">
+                            </div>
+                            <div class="button-column">
+                                <button class="svgbutton" onclick="addInput()">
                                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
-                                        viewBox="0 0 172 172" style=" fill:#000000;" >
+                                        viewBox="0 0 172 172" style=" fill:#000000;">
                                         <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
                                             stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
-                                            stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-                                            font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                            stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                            font-weight="none" font-size="none" text-anchor="none"
+                                            style="mix-blend-mode: normal">
                                             <path d="M0,172v-172h172v172z" fill="none"></path>
                                             <g fill="#ffcccc">
                                                 <path
@@ -58,62 +57,64 @@
                                         </g>
                                     </svg>
                                 </button>
-                                </div>
-                                <div class="form-group">
-                                    <label for="name">Initial State</label><br>
-                                    <input type="tel" id="phone" placeholder="" name="phone" 
-                                    required pattern="[0-9]{10}">
-                                </div>
-                               
-                                <div class="form-group">
-                                    <label for="email">Normal States</label>
-                                    <input type="email" id="email" required name="email">
-                                </div>
-                                <div id="newElementId"></div>
-                                <div class="cute">
-                                    <button class="svgbutton" onclick="createNewElement()" >
-                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
-                                        viewBox="0 0 172 172" style=" fill:#000000;" >
-                                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
-                                            stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
-                                            stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-                                            font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                                            <path d="M0,172v-172h172v172z" fill="none"></path>
-                                            <g fill="#ffcccc">
-                                                <path
-                                                    d="M86,6.88c-43.65603,0 -79.12,35.46397 -79.12,79.12c0,43.65603 35.46397,79.12 79.12,79.12c43.65603,0 79.12,-35.46397 79.12,-79.12c0,-43.65603 -35.46397,-79.12 -79.12,-79.12zM86,13.76c39.93779,0 72.24,32.30221 72.24,72.24c0,39.93779 -32.30221,72.24 -72.24,72.24c-39.93779,0 -72.24,-32.30221 -72.24,-72.24c0,-39.93779 32.30221,-72.24 72.24,-72.24zM82.56,44.72v37.84h-37.84v6.88h37.84v37.84h6.88v-37.84h37.84v-6.88h-37.84v-37.84z">
-                                                </path>
-                                            </g>
+                            </div>
+
+                        </div>
+                        <div id="inputs"></div>
+                        <div class="form-group">
+                            <label for="name">Initial State</label><br>
+                            <input type="tel" id="phone" placeholder="" name="phone" required pattern="[0-9]{10}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Normal States</label>
+                            <input type="email" id="email" required name="email">
+                        </div>
+                        <div id="newElementId"></div>
+                        <div class="cute">
+                            <button class="svgbutton" onclick="createNewElement()">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
+                                    viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffcccc">
+                                            <path
+                                                d="M86,6.88c-43.65603,0 -79.12,35.46397 -79.12,79.12c0,43.65603 35.46397,79.12 79.12,79.12c43.65603,0 79.12,-35.46397 79.12,-79.12c0,-43.65603 -35.46397,-79.12 -79.12,-79.12zM86,13.76c39.93779,0 72.24,32.30221 72.24,72.24c0,39.93779 -32.30221,72.24 -72.24,72.24c-39.93779,0 -72.24,-32.30221 -72.24,-72.24c0,-39.93779 32.30221,-72.24 72.24,-72.24zM82.56,44.72v37.84h-37.84v6.88h37.84v37.84h6.88v-37.84h37.84v-6.88h-37.84v-37.84z">
+                                            </path>
                                         </g>
-                                    </svg>
-                                </button>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Final States</label>
-                                    <input type="email" id="email" required name="email">
-                                </div>
-                                <div id="newElementId"></div>
-                                <div class="cute">
-                                    <button class="svgbutton" onclick="createNewElement()" >
-                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
-                                        viewBox="0 0 172 172" style=" fill:#000000;" >
-                                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
-                                            stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
-                                            stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-                                            font-size="none" text-anchor="none" style="mix-blend-mode: normal">
-                                            <path d="M0,172v-172h172v172z" fill="none"></path>
-                                            <g fill="#ffcccc">
-                                                <path
-                                                    d="M86,6.88c-43.65603,0 -79.12,35.46397 -79.12,79.12c0,43.65603 35.46397,79.12 79.12,79.12c43.65603,0 79.12,-35.46397 79.12,-79.12c0,-43.65603 -35.46397,-79.12 -79.12,-79.12zM86,13.76c39.93779,0 72.24,32.30221 72.24,72.24c0,39.93779 -32.30221,72.24 -72.24,72.24c-39.93779,0 -72.24,-32.30221 -72.24,-72.24c0,-39.93779 32.30221,-72.24 72.24,-72.24zM82.56,44.72v37.84h-37.84v6.88h37.84v37.84h6.88v-37.84h37.84v-6.88h-37.84v-37.84z">
-                                                </path>
-                                            </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Final States</label>
+                            <input type="email" id="email" required name="email">
+                        </div>
+                        <div id="newElementId"></div>
+                        <div class="cute">
+                            <button class="svgbutton" onclick="createNewElement()">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
+                                    viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffcccc">
+                                            <path
+                                                d="M86,6.88c-43.65603,0 -79.12,35.46397 -79.12,79.12c0,43.65603 35.46397,79.12 79.12,79.12c43.65603,0 79.12,-35.46397 79.12,-79.12c0,-43.65603 -35.46397,-79.12 -79.12,-79.12zM86,13.76c39.93779,0 72.24,32.30221 72.24,72.24c0,39.93779 -32.30221,72.24 -72.24,72.24c-39.93779,0 -72.24,-32.30221 -72.24,-72.24c0,-39.93779 32.30221,-72.24 72.24,-72.24zM82.56,44.72v37.84h-37.84v6.88h37.84v37.84h6.88v-37.84h37.84v-6.88h-37.84v-37.84z">
+                                            </path>
                                         </g>
-                                    </svg>
-                                </button>
-                                </div>
+                                    </g>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="column side" id="n2">
                 <div class="card">
@@ -124,9 +125,9 @@
         </div>
     </div>
     <script type="text/JavaScript" src="dfa.js">
-        
+
         </script>
-    
+
 
 </body>
 
