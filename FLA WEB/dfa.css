@@ -133,3 +133,7 @@ input{
   height: 48.3em;
   /* border-radius: 30px; */
 }
+.classless{
+  width: inherit;
+  justify-items: center;
+}

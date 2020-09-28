@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DFA</title>
-    <link rel="stylesheet" href = 'dfa.css'>
+    <link rel="stylesheet" href='dfa.css'>
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+
     <style>
-        #n1{
+        #n1 {
             color: black;
             background-color: white;
         }
     </style>
 </head>
+
 <body>
     <div>
         <nav id="nav">
             <div class="container">
                 <div>
-                <a href="index.html"></a>
+                    <a href="index.html"></a>
                 </div>
                 <div>
-                <a href="index.html">HOME</a>
+                    <a href="index.html">HOME</a>
                 </div>
-        </div>
+            </div>
         </nav>
         <div class="row">
             <div class="column first">
@@ -31,43 +35,57 @@
                     </h1>
                     <div class="dfa1">
                         <div class="shift">
-                    <form id='form'>
-                        <div class="form-group">
-                            <label for="name" >Input</label><br>
-                            <input type="text" id = "name" placeholder="" name = "name"
-                                    required minlength="3" maxlength="100">
-                        </div>
-                        <!-- phone number -->
-                        <div class="form-group">
-                            <label for="name" >Input States</label><br>
-                            <input type="tel" id = "phone" placeholder="" name = "phone"
-                                    required pattern="[0-9]{10}">
-                        </div>
-                        <!-- email -->
-                        <div class="form-group">
-                            <label for="email" >Final States</label>
-                            <input type="email" id = "email" 
-                                    required name = "email">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" >Transition Table</label>
-                            <input type="email" id = "email" 
-                                    required name = "email">
-                        </div>
-                        </form>
+                            <form id='form'>
+                                <div class="form-group">
+                                    <label for="name">Input</label><br>
+                                    <input type="text" id="name" placeholder="" name="name" required minlength="3"
+                                        maxlength="100">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="name">Input States</label><br>
+                                    <input type="tel" id="phone" placeholder="" name="phone" required
+                                        pattern="[0-9]{10}">
+                                </div>
+                                <div class="classless">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
+                                    viewBox="0 0 172 172" style=" fill:#000000;" >
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#ffcccc">
+                                            <path
+                                                d="M86,6.88c-43.65603,0 -79.12,35.46397 -79.12,79.12c0,43.65603 35.46397,79.12 79.12,79.12c43.65603,0 79.12,-35.46397 79.12,-79.12c0,-43.65603 -35.46397,-79.12 -79.12,-79.12zM86,13.76c39.93779,0 72.24,32.30221 72.24,72.24c0,39.93779 -32.30221,72.24 -72.24,72.24c-39.93779,0 -72.24,-32.30221 -72.24,-72.24c0,-39.93779 32.30221,-72.24 72.24,-72.24zM82.56,44.72v37.84h-37.84v6.88h37.84v37.84h6.88v-37.84h37.84v-6.88h-37.84v-37.84z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Final States</label>
+                                    <input type="email" id="email" required name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Transition Table</label>
+                                    <input type="email" id="email" required name="email">
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="column side" id = "n2">
+            <div class="column side" id="n2">
                 <div class="card">
                     <div class="bored">
-                    <!-- <h1 id="n1">CHANGE THIS COLOR</h1> -->
+                        <!-- <h1 id="n1">CHANGE THIS COLOR</h1> -->
                     </div>
-                </div>    
+                </div>
             </div>
         </div>
     </div>
-    
+
 </body>
+
 </html>
