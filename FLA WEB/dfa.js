@@ -1,6 +1,6 @@
 function createNewElement() {
     var txtNewInputBox = document.createElement('div');
-    txtNewInputBox.innerHTML = "<p>by text i meant this, but like sundar, and on first addition we'll add, uske baad se we'll just change the text everytime</p>";
+    txtNewInputBox.innerHTML = "<input type='text' id='newInputBox'>";
     document.getElementById("newElementId").appendChild(txtNewInputBox);
 }
 function createNewElement2() {
@@ -13,3 +13,4 @@ function createNewElement3() {
     txtNewInputBox.innerHTML = "<input type='text' id='newInputBox3'>";
     document.getElementById("newElementId3").appendChild(txtNewInputBox3);
 }
+
