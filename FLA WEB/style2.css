@@ -143,3 +143,6 @@ a:focus {
 .columnside {
   background-color: white;
 }
+.heading {
+  border: 0px dotted blue;
+}
