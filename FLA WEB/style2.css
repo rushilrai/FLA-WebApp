@@ -72,14 +72,14 @@ a:focus {
   margin: 4% 5% 0px 5%;
   background-color: white;
   width: 90%;
-  overflow-y: scroll;
+  overflow-y: hidden;
   height: 60vh;
 }
 .faa1 {
   margin: 4% 5%;
   background-color: #ffcccc;
   width: 90%;
-  overflow-y: scroll;
+  overflow-y: hidden;
   height: 60vh;
 }
 .card {
@@ -109,7 +109,7 @@ a:focus {
 }
 .button2 {
   cursor: pointer;
-  border: 0px solid #3a3a3a;
+  /* border: 0px solid #3a3a3a; */
   background: #ffcccc;
   color: white;
   border-radius: 15px;
@@ -119,10 +119,12 @@ a:focus {
   font-family: "Open sans", sans-serif;
   font-size: 30px;
   letter-spacing: 2px;
+  border: none;
 }
 .button2:hover {
   color: #ffcccc;
   background-color: #646262;
+  border: none;
 }
 .buttonrow1 {
   display: flex;
