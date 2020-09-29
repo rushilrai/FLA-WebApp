@@ -72,9 +72,10 @@ H1 {
     max-height: 70vh;
 }
 .box2{
-    margin: 15vh 5% 5% 5%;
+    margin: 12% 5% 5% 5%;
     border: 3px solid #ffcccc;
     height: 80%;
+    overflow: hidden;
 }
 label {
     position: relative;
@@ -105,6 +106,8 @@ label {
   .svgbutton {
     border: 0px solid transparent;
     background: transparent;
+    width: 20%;
+    margin-left: 1%;
   }
   .svgbutton:active {
     transform: translate(0, 0.3rem);
@@ -126,5 +129,5 @@ label {
     margin-left: 0px;
   }
   .form-group{
-    width: 25vw;
+    width: 80%;
   }
