@@ -15,19 +15,25 @@ function createNewElement3() {
 }
 
 let inputs = [];
+let userInput;
 var x = 0;
 var array = Array();
 
-function addInput()
-{
- array[x] = document.getElementById("input").value;
- x++;
- document.getElementById("input").value = "";
- var e = "<br/>";   
-    
-   for (var y=0; y<array.length; y++)
-   {
-     e += "Element " + y + " = " + array[y] + "<br/>";
-   }
-   document.getElementById("inputs").innerHTML = e;
+function addInput() {
+    userInput = document.getElementById('input').value;
+    for (i = 0; i < userInput; i++) {
+        inputs.push(i);
+        console.log(inputs);
+    }
+
+    /*array[x] = document.getElementById("input").value;
+    x++;
+    document.getElementById("input").value = "";
+    var e = "<br/>";   
+       
+      for (var y=0; y<array.length; y++)
+      {
+        e += "Element " + y + " = " + array[y] + "<br/>";
+      }
+      document.getElementById("inputs").innerHTML = e;*/
 }
