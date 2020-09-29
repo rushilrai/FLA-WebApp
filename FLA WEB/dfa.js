@@ -28,15 +28,20 @@ function createNewElement3() {
 let inputs = [];
 let userInput;
 
-
 function addInput() {
     userInput = document.getElementById('input').value;
+
+
+
     inputs = [];
     for (i = 0; i <= userInput; i++) {
 
         inputs.push(i);
+        console.log(inputs);
         document.getElementById('output').innerHTML = inputs;
+
     }
+
 }
 
 let normalInput;
@@ -63,9 +68,36 @@ function addFinal() {
     }
     else {
         finalStates.push(finalInput);
-        console.log('Normal:')
+        console.log('Inputs:')
+        console.log(inputs);
+        console.log('Normal:');
         console.log(normalStates);
-        console.log('Final')
+        console.log('Final');
         console.log(finalStates);
+    }
+}
+
+let transitions = [];
+
+function addTransition() {
+    startValid = false;
+    endValid = false;
+    inputValid = false;
+    transitionStart = document.getElementById('transitionStartState').value;
+    transitionInput = document.getElementById('transitionInput').value;
+    transitionEnd = document.getElementById('transitionEndState').value;
+    if (!(normalStates.includes(transitionStart)) && (transitionStart != 'A')) {
+        alert('Enter a Valid Start State');
+    } else {
+        startValid = true;
+    }
+    if (!(finalStates.includes(transitionEnd))) {
+        alert('Enter a Valid End State');
+    } else {
+        endValid = true;
+    }
+    if (startValid == true && endValid == true) {
+        transitions.push(transitionStart + transitionInput + transitionEnd);
+        console.log(transitions);
     }
 }
