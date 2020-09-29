@@ -31,9 +31,10 @@ var array = Array();
 
 function addInput() {
     userInput = document.getElementById('input').value;
-    for (i = 0; i < userInput; i++) {
+    for (i = 0; i < userInput; i++)
+     {
         inputs.push(i);
-        console.log(inputs);
+        console.log(output);
     }
 //
 
