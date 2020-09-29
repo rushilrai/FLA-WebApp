@@ -27,7 +27,7 @@ function createNewElement3() {
 // }
 let inputs = [];
 let userInput;
-var array = Array();
+
 
 function addInput() {
     userInput = document.getElementById('input').value;
@@ -37,16 +37,35 @@ function addInput() {
         inputs.push(i);
         document.getElementById('output').innerHTML = inputs;
     }
-    //
+}
 
-    /*array[x] = document.getElementById("input").value;
-    x++;
-    document.getElementById("input").value = "";
-    var e = "<br/>";   
-       
-      for (var y=0; y<array.length; y++)
-      {
-        e += "Element " + y + " = " + array[y] + "<br/>";
-      }
-      document.getElementById("inputs").innerHTML = e;*/
+let normalInput;
+let normalStates = [];
+
+function addNormal() {
+    normalInput = document.getElementById('normalstate').value;
+    if (normalInput == 'A' || normalStates.includes(normalInput)) {
+        alert("Each new state has to be unique");
+    }
+    else {
+        normalStates.push(normalInput);
+        console.log(normalStates);
+    }
+}
+
+let finalInput;
+let finalStates = [];
+
+function addFinal() {
+    finalInput = document.getElementById('finalstate').value;
+    if (finalInput == 'A' || normalStates.includes(finalInput)) {
+        alert("Final state has to be unique");
+    }
+    else {
+        finalStates.push(finalInput);
+        console.log('Normal:')
+        console.log(normalStates);
+        console.log('Final')
+        console.log(finalStates);
+    }
 }
