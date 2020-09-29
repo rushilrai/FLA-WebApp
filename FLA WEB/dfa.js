@@ -16,7 +16,6 @@ function createNewElement3() {
 
 let inputs = [];
 let userInput;
-var x = 0;
 var array = Array();
 
 function addInput() {
@@ -25,6 +24,7 @@ function addInput() {
         inputs.push(i);
         console.log(inputs);
     }
+//
 
     /*array[x] = document.getElementById("input").value;
     x++;
