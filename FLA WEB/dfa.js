@@ -1,32 +1,3 @@
-// function addInput() {
-//     inputs = document.getElementById('input').value;
-//     document.getElementById('inputs').innerHTML = inputs;
-//     console.log(inputs.length);
-// }
-// function createNewElement2() {
-//     var txtNewInputBox2 = document.createElement('div');
-//     txtNewInputBox2.innerHTML = "<input type='text' id='newInputBox2'>";
-//     document.getElementById("newElementId2").appendChild(txtNewInputBox2);
-// }
-// function createNewElement3() {
-//     var txtNewInputBox3 = document.createElement('div');
-//     txtNewInputBox3.innerHTML = "<input type='text' id='newInputBox3'>";
-//     document.getElementById("newElementId3").appendChild(txtNewInputBox3);
-// }
-
-
-// var i = 0;
-// var array = [];
-// function addInput()
-// {
-//   num = document.getElementById("input").value;
-//   for(i = 0 ; i < num; i+  {
-//     array.(i);
-//   }
-//   document.getElementById('output').innerHTML = array;
-// }
-
-
 let inputs = [];
 let userInput;
 
@@ -53,14 +24,11 @@ function addNormal() {
     if (normalInput == 'A' || normalStates.includes(normalInput) || !(normalInput.match(letters))) {
         alert("Each new state has to be unique & an Alphabet");
     }
-    // else if(normalInput == "0"|| normalInput == "1"||normalInput == "2" ||normalInput == "3" ||normalInput == "4" ||normalInput == "5"||normalInput == "6" ||normalInput == "7"|| normalInput == "8" || normalInput == "9"){
-    //         normalStates.filter(normalInput);
-    // }
     else {
-        normalStates.push(newnormal);
+        normalStates.push(normalInput);
         console.log(normalStates);
     }
-    
+
 }
 
 
@@ -74,8 +42,6 @@ function addFinal() {
     }
     else {
         finalStates.push(finalInput);
-        console.log('Inputs:')
-        console.log(inputs);
         console.log('Normal:');
         console.log(normalStates);
         console.log('Final');
@@ -83,8 +49,11 @@ function addFinal() {
     }
 }
 
-let transitions = {};
-//A: [b,d]
+let transitions = [];
+let transitionsCode = [];
+//A: [d]
+//A: d
+//A: e
 
 function addTransition() {
     startValid = false;
@@ -98,14 +67,25 @@ function addTransition() {
     } else {
         startValid = true;
     }
-    if (!(finalStates.includes(transitionEnd)) && !(normalStates.includes(transitionStart))) {
+    if (!(finalStates.includes(transitionEnd)) && !(normalStates.includes(transitionStart)) && (transitionStart != 'A')) {
         alert('Enter a Valid End State');
     } else {
         endValid = true;
     }
     if (startValid == true && endValid == true) {
-        transitions.push();
-        console.log(transitions);
+        var tryTransition = transitionStart + transitionInput;
+        console.log(tryTransition);
+        console.log(transitionsCode);
+
+        if (transitionsCode.includes(tryTransition)) {
+            alert('Transition already Used');
+        } else {
+            transitions.push(transitionStart + transitionInput + transitionEnd);
+            transitionsCode.push(transitionStart + transitionInput);
+            console.log(transitions);
+        }
+
+
     }
 }
 
