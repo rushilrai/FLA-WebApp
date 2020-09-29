@@ -3,13 +3,15 @@
 
 html {
   box-sizing: border-box;
-  height: 100%;
 }
 
 body {
-  margin: 0;
+  /* margin: 0; */
   /* min-height: 100vh ; */
   background-color: white;
+  height: 100vh;
+  margin: 0px 0px 0px 0px;
+  overflow: hidden;
 }
 
 h1 {
@@ -19,16 +21,17 @@ h1 {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
   margin-top: 5%;
+  margin-bottom: auto;
 }
 nav {
-  z-index: 10;
   position: fixed;
   font-family: "Open Sans", sans-serif;
-  font-size: 30px;
+  font-size: 1.7rem;
   letter-spacing: 1px;
-  padding: 25px;
+  padding: 3vh;
   width: 100vw;
   background: #6d6d6d;
+  top: 0px;
 }
 
 a {
@@ -43,19 +46,19 @@ a {
 a:hover,
 a:focus {
   color: #a59b9b;
-  border-bottom: 0px solid;
+  border-bottom: 0px solid transparent;
 }
 .container {
   display: flex;
   justify-content: space-between;
-  margin-right: 40px;
 }
 .row {
-  max-width: 100%;
-  width: 100%;
+  /* max-width: 100%;
+  width: 100%; */
   /* margin: 0 ; */
   display: flex;
-  /* float: left; */
+  flex-wrap: wrap;
+  flex-direction: row;
   height: 100vh;
 }
 .column {
@@ -73,7 +76,7 @@ a:focus {
   flex-direction: column;
   justify-content: space-around;
   /* min-width: 500px; */
-  min-height: 80vh;
+  min-height: 100vh;
 }
 .column.first {
   width: 35%;
@@ -126,6 +129,7 @@ input {
 }
 .shift {
   margin-top: 10%;
+  height: 100vh;
 }
 .bored {
   margin-top: 5%;
@@ -139,6 +143,7 @@ input {
 .svgbutton {
   border: 0px solid transparent;
   background: transparent;
+  /* margin-left: 50%; */
 }
 .svgbutton:active {
   transform: translate(0, 0.3rem);
