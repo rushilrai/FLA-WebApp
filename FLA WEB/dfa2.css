@@ -75,7 +75,6 @@ height: 100vh;
     flex-direction: column;
 }
 .box2{
-  /* padding-top: 10%; */
     margin: 7em 1.2em 1.2em 1.2em;
     border: 3px solid #ffcccc;
     height: 80%;
@@ -86,7 +85,7 @@ label {
     text-align: start;
     margin: 20% 5% 0% 5%;
     margin-top: auto;
-    margin-left: 5vh;
+    margin-left: 8vh;
     font-family: "Open Sans", sans-serif;
     color: #6d6d6d;
   }
@@ -97,14 +96,14 @@ label {
     border-radius: 5px;
     outline: none;
     box-sizing: border-box;
-    margin-left: 5vh;
+    margin-left: 8vh;
     font-size: 30px;
     font-family: "Open Sans", sans-serif;
   }
   .shift {
     margin-top: 10%;
     height: 100vh;
-    margin-left: 5vh;
+    margin-left: 8vh;
   }
   .svgbutton {
     border: 0px solid transparent;
@@ -132,6 +131,26 @@ label {
     margin-left: 0px;
   }
   .form-group{
+    margin-right: 10%;
+    max-width: 70%;
+  }
+  .api{
+    border: 0px solid transparent;
+    box-shadow: none;
+  }
+  .api:hover {
+filter: brightness(140%);
+border: 0px solid transparent;
+box-shadow: none;
+  }
+  .api:active {
+    transform: translate(0, 0.3rem);
+  }
+  
+  .api:focus {
+    outline: none;
+  }
+  .form-group1{
     margin-right: 10%;
     max-width: 70%;
   }
