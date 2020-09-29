@@ -58,7 +58,7 @@ let finalStates = [];
 
 function addFinal() {
     finalInput = document.getElementById('finalstate').value;
-    if (finalInput == 'A' || normalStates.includes(finalInput)) {
+    if (finalInput == 'A' || normalStates.includes(finalInput) || finalStates.includes(finalInput)) {
         alert("Final state has to be unique");
     }
     else {
