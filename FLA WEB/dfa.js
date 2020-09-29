@@ -32,7 +32,7 @@ var array = Array();
 function addInput() {
     userInput = document.getElementById('input').value;
     inputs = [];
-    for (i = 0; i < userInput; i++) {
+    for (i = 0; i <= userInput; i++) {
 
         inputs.push(i);
         document.getElementById('output').innerHTML = inputs;

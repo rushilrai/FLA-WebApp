@@ -58,7 +58,7 @@ H1 {
 .column2{
     background: white;
     width: 60%;
-    height: 100vh;
+    /* height: 100vh; */
 }
 .box1{
     display: flex;
@@ -67,11 +67,14 @@ H1 {
     margin: 5% 10% 0% 10%;
     background: white;
     height: 70vh;
+    max-width: 80%;
     overflow-y: scroll;
+    max-height: 70vh;
 }
 .box2{
     margin: 15vh 5% 5% 5%;
     border: 3px solid #ffcccc;
+    height: 80%;
 }
 label {
     position: relative;
@@ -79,7 +82,7 @@ label {
     text-align: center;
     margin: 20% 5% 0% 5%;
     margin-top: auto;
-    margin-left: 7vh;
+    margin-left: 5vh;
     font-family: "Open Sans", sans-serif;
     color: #6d6d6d;
   }
@@ -90,14 +93,14 @@ label {
     border-radius: 5px;
     outline: none;
     box-sizing: border-box;
-    margin-left: 7vh;
+    margin-left: 5vh;
     font-size: 30px;
-    width: 73%;
     font-family: "Open Sans", sans-serif;
   }
   .shift {
     margin-top: 10%;
     height: 100vh;
+    margin-left: 5vh;
   }
   .svgbutton {
     border: 0px solid transparent;
@@ -120,4 +123,8 @@ label {
     display: flex;
     flex-direction: column;
     justify-items: flex-end;
+    margin-left: 0px;
+  }
+  .form-group{
+    width: 25vw;
   }
