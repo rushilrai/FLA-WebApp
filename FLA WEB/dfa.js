@@ -14,6 +14,17 @@ function createNewElement3() {
     document.getElementById("newElementId3").appendChild(txtNewInputBox3);
 }
 
+
+// var i = 0;
+// var array = [];
+// function addInput()
+// {
+//   num = document.getElementById("input").value;
+//   for(i = 0 ; i < num; i+  {
+//     array.(i);
+//   }
+//   document.getElementById('output').innerHTML = array;
+// }
 let inputs = [];
 let userInput;
 var array = Array();
