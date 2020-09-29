@@ -31,12 +31,13 @@ var array = Array();
 
 function addInput() {
     userInput = document.getElementById('input').value;
-    for (i = 0; i < userInput; i++)
-     {
+    inputs = [];
+    for (i = 0; i < userInput; i++) {
+
         inputs.push(i);
-        console.log(output);
+        document.getElementById('output').innerHTML = inputs;
     }
-//
+    //
 
     /*array[x] = document.getElementById("input").value;
     x++;
