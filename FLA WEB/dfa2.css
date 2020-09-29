@@ -107,7 +107,7 @@ label {
     border: 0px solid transparent;
     background: transparent;
     width: 20%;
-    margin-left: 1%;
+    margin-left: 7%;
   }
   .svgbutton:active {
     transform: translate(0, 0.3rem);
@@ -129,5 +129,7 @@ label {
     margin-left: 0px;
   }
   .form-group{
-    width: 80%;
+    /* width: 80%; */
+    margin-right: 10%;
+    max-width: 70%;
   }
