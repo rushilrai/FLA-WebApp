@@ -35,7 +35,7 @@ function addInput() {
     for (i = 0; i <= userInput; i++) {
 
         inputs.push(i);
-        // document.getElementById('output').innerHTML = inputs;
+        document.getElementById('output').innerHTML = inputs;
     }
 }
 
