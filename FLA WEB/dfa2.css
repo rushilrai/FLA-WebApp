@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Kaushan+Script&family=Oswald&display=swap");
+
+html{
+    background-color: white;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+    height: 100vh;
+    margin: 0px 0px 0px 0px;
+    overflow: hidden;
+}
+nav{
+    position: fixed;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    padding: 3vh;
+    width: 100vw;
+    background: #6d6d6d;
+    top: 0px;
+}
+a {
+    margin-right: 4rem;
+    color: #ffcccc;
+    text-decoration: none;
+    border-bottom: 0px solid transparent;
+    font-weight: 300;
+  }
+  a:hover,
+  a:focus {
+    color: #a59b9b;
+    border-bottom: 0px solid transparent;
+  }
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+H1 {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 1px;
+    margin-top: 15%;
+    margin-bottom: auto;
+  }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 100vh;
+}
+.column1{
+    background: #ffcccc;
+    width: 40%;
+}
+.column2{
+    background: white;
+    width: 60%;
+    height: 100vh;
+}
+.box1{
+    display: flex;
+    justify-content: space-around;
+    border: 5px solid #6d6d6d;
+    margin: 5% 10% 0% 10%;
+    background: white;
+    height: 70vh;
+    overflow-y: scroll;
+}
+.box2{
+    margin: 15vh 5% 5% 5%;
+    border: 3px solid #ffcccc;
+}
+label {
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    margin: 20% 5% 0% 5%;
+    margin-top: auto;
+    margin-left: 7vh;
+    font-family: "Open Sans", sans-serif;
+    color: #6d6d6d;
+  }
+  input {
+    height: 45px;
+    padding: 5px 5px;
+    border: 3px solid #ffcccc;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    margin-left: 7vh;
+    font-size: 30px;
+    width: 73%;
+    font-family: "Open Sans", sans-serif;
+  }
+  .shift {
+    margin-top: 10%;
+    height: 100vh;
+  }
+  .svgbutton {
+    border: 0px solid transparent;
+    background: transparent;
+  }
+  .svgbutton:active {
+    transform: translate(0, 0.3rem);
+  }
+  
+  .svgbutton:focus {
+    outline: none;
+  }
+  
+  .input-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .button-column {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+  }

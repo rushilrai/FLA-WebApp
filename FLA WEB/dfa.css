@@ -51,10 +51,11 @@ a:focus {
 .container {
   display: flex;
   justify-content: space-between;
+  margin-right: 40px;
 }
 .row {
-  /* max-width: 100%;
-  width: 100%; */
+  max-width: 100%;
+  width: 100%;
   /* margin: 0 ; */
   display: flex;
   flex-wrap: wrap;
@@ -66,17 +67,13 @@ a:focus {
   /* box-shadow: 0 10px 15px rgba(0,0,0,0.8); */
   /* background: #dafeff; */
   background-color: #ffcccc;
-
-  /* border-radius: 10px; */
-  /* flex-basis: 50%; */
-  /* height: 57.8em; */
 }
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   /* min-width: 500px; */
-  min-height: 100vh;
+  min-height: 80vh;
 }
 .column.first {
   width: 35%;
@@ -91,7 +88,7 @@ a:focus {
 .dfa1 {
   margin-left: 10%;
   margin-right: 10%;
-  height: 75vh;
+  height: 46em;
   display: flex;
   background: rgb(255, 255, 255);
   /* flex-direction: column; */
