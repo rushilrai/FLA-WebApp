@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Kaushan+Script&family=Oswald&display=swap");
 
 html{
-    background-color: white;
     box-sizing: border-box;
 }
 body{
     background-color: white;
     height: 100vh;
-    margin: 0px 0px 0px 0px;
+    margin: 0% 0% 0% 0%;
     overflow: hidden;
 }
 nav{
@@ -18,10 +17,10 @@ nav{
     padding: 3vh;
     width: 100vw;
     background: #6d6d6d;
-    top: 0px;
+    top: 0%;
 }
 a {
-    margin-right: 4rem;
+    margin-right: 3em;
     color: #ffcccc;
     text-decoration: none;
     border-bottom: 0px solid transparent;
@@ -30,7 +29,7 @@ a {
   a:hover,
   a:focus {
     color: #a59b9b;
-    border-bottom: 0px solid transparent;
+    border-bottom: 0% solid transparent;
   }
 .container {
     display: flex;
@@ -72,7 +71,8 @@ H1 {
     max-height: 70vh;
 }
 .box2{
-    margin: 12% 5% 5% 5%;
+  /* padding-top: 10%; */
+    margin: 7em 1.2em 1.2em 1.2em;
     border: 3px solid #ffcccc;
     height: 80%;
     overflow: hidden;
@@ -88,7 +88,7 @@ label {
     color: #6d6d6d;
   }
   input {
-    height: 45px;
+    height: 3em;
     padding: 5px 5px;
     border: 3px solid #ffcccc;
     border-radius: 5px;

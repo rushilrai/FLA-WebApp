@@ -3,16 +3,16 @@
 //     document.getElementById('inputs').innerHTML = inputs;
 //     console.log(inputs.length);
 // }
-function createNewElement2() {
-    var txtNewInputBox2 = document.createElement('div');
-    txtNewInputBox2.innerHTML = "<input type='text' id='newInputBox2'>";
-    document.getElementById("newElementId2").appendChild(txtNewInputBox2);
-}
-function createNewElement3() {
-    var txtNewInputBox3 = document.createElement('div');
-    txtNewInputBox3.innerHTML = "<input type='text' id='newInputBox3'>";
-    document.getElementById("newElementId3").appendChild(txtNewInputBox3);
-}
+// function createNewElement2() {
+//     var txtNewInputBox2 = document.createElement('div');
+//     txtNewInputBox2.innerHTML = "<input type='text' id='newInputBox2'>";
+//     document.getElementById("newElementId2").appendChild(txtNewInputBox2);
+// }
+// function createNewElement3() {
+//     var txtNewInputBox3 = document.createElement('div');
+//     txtNewInputBox3.innerHTML = "<input type='text' id='newInputBox3'>";
+//     document.getElementById("newElementId3").appendChild(txtNewInputBox3);
+// }
 
 
 // var i = 0;
@@ -25,14 +25,13 @@ function createNewElement3() {
 //   }
 //   document.getElementById('output').innerHTML = array;
 // }
+
+
 let inputs = [];
 let userInput;
 
 function addInput() {
     userInput = document.getElementById('input').value;
-
-
-
     inputs = [];
     for (i = 0; i <= userInput; i++) {
 
@@ -48,15 +47,22 @@ let normalInput;
 let normalStates = [];
 
 function addNormal() {
+    document.getElementById("normalstate").pattern = "[a-zA-Z]+";
     normalInput = document.getElementById('normalstate').value;
-    if (normalInput == 'A' || normalStates.includes(normalInput)) {
+    let newnormal = normalInput.toUpperCase();
+    if (normalInput == 'A' || normalStates.includes(newnormal)) {
         alert("Each new state has to be unique");
     }
+    // else if(normalInput == "0"|| normalInput == "1"||normalInput == "2" ||normalInput == "3" ||normalInput == "4" ||normalInput == "5"||normalInput == "6" ||normalInput == "7"|| normalInput == "8" || normalInput == "9"){
+    //         normalStates.filter(normalInput);
+    // }
     else {
-        normalStates.push(normalInput);
+        normalStates.push(newnormal);
         console.log(normalStates);
     }
+    
 }
+
 
 let finalInput;
 let finalStates = [];
