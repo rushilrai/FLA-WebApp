@@ -21,10 +21,9 @@ var array = Array();
 function addInput()
 {
  array[x] = document.getElementById("input").value;
-//  alert("Element: " + array[x] + " Added at index " + x);
  x++;
  document.getElementById("input").value = "";
- var e = "<hr/>";   
+ var e = "<br/>";   
     
    for (var y=0; y<array.length; y++)
    {

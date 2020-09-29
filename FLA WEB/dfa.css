@@ -91,7 +91,7 @@ a:focus {
 .dfa1 {
   margin-left: 10%;
   margin-right: 10%;
-  height: 46em;
+  height: 75vh;
   display: flex;
   background: rgb(255, 255, 255);
   /* flex-direction: column; */
