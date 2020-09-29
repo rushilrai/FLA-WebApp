@@ -46,11 +46,12 @@ function addInput() {
 
 let normalInput;
 let normalStates = [];
+var letters = /^[A-Za-z]+$/;
 
 function addNormal() {
     normalInput = document.getElementById('normalstate').value;
-    if (normalInput == 'A' || normalStates.includes(normalInput)) {
-        alert("Each new state has to be unique");
+    if (normalInput == 'A' || normalStates.includes(normalInput) || !(normalInput.match(letters))) {
+        alert("Each new state has to be unique & an Alphabet");
     }
     else {
         normalStates.push(normalInput);
@@ -63,7 +64,7 @@ let finalStates = [];
 
 function addFinal() {
     finalInput = document.getElementById('finalstate').value;
-    if (finalInput == 'A' || normalStates.includes(finalInput) || finalStates.includes(finalInput)) {
+    if (finalInput == 'A' || normalStates.includes(finalInput) || finalStates.includes(finalInput) || !(normalInput.match(letters))) {
         alert("Final state has to be unique");
     }
     else {
@@ -77,7 +78,8 @@ function addFinal() {
     }
 }
 
-let transitions = [];
+let transitions = {};
+//A: [b,d]
 
 function addTransition() {
     startValid = false;
@@ -91,13 +93,14 @@ function addTransition() {
     } else {
         startValid = true;
     }
-    if (!(finalStates.includes(transitionEnd))) {
+    if (!(finalStates.includes(transitionEnd)) && !(normalStates.includes(transitionStart))) {
         alert('Enter a Valid End State');
     } else {
         endValid = true;
     }
     if (startValid == true && endValid == true) {
-        transitions.push(transitionStart + transitionInput + transitionEnd);
+        transitions.push();
         console.log(transitions);
     }
 }
+
