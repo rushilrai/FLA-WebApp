@@ -49,15 +49,19 @@ H1 {
     flex-wrap: wrap;
     flex-direction: row;
     height: 100vh;
+    border: 1px blue dotted;
 }
 .column1{
     background: #ffcccc;
     width: 40%;
+    border: 1px blue dotted;
+
 }
 .column2{
     background: white;
     width: 60%;
     /* height: 100vh; */
+    border: 1px blue dotted;
 }
 .box1{
     display: flex;
@@ -69,6 +73,8 @@ H1 {
     max-width: 80%;
     overflow-y: scroll;
     max-height: 70vh;
+    flex-direction: column;
+    border: 1px blue dotted;
 }
 .box2{
   /* padding-top: 10%; */
@@ -76,6 +82,7 @@ H1 {
     border: 3px solid #ffcccc;
     height: 80%;
     overflow: hidden;
+    border: 1px blue dotted;
 }
 label {
     position: relative;
@@ -86,6 +93,7 @@ label {
     margin-left: 5vh;
     font-family: "Open Sans", sans-serif;
     color: #6d6d6d;
+    border: 1px blue dotted;
   }
   input {
     height: 3em;
@@ -97,17 +105,20 @@ label {
     margin-left: 5vh;
     font-size: 30px;
     font-family: "Open Sans", sans-serif;
+    border: 1px blue dotted;
   }
   .shift {
     margin-top: 10%;
     height: 100vh;
     margin-left: 5vh;
+    border: 1px blue dotted;
   }
   .svgbutton {
     border: 0px solid transparent;
     background: transparent;
     width: 20%;
     margin-left: 7%;
+    border: 1px blue dotted;
   }
   .svgbutton:active {
     transform: translate(0, 0.3rem);
@@ -129,7 +140,6 @@ label {
     margin-left: 0px;
   }
   .form-group{
-    /* width: 80%; */
     margin-right: 10%;
     max-width: 70%;
   }

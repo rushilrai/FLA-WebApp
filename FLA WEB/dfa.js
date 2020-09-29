@@ -1,28 +1,12 @@
-let inputs = [];
-let userInput;
-
-function addInput() {
-    userInput = document.getElementById('input').value;
-    inputs = [];
-    for (i = 0; i <= userInput; i++) {
-
-        inputs.push(i);
-        console.log(inputs);
-        document.getElementById('output').innerHTML = inputs;
-
-    }
-
-}
-
 let normalInput;
 let normalStates = [];
-var letters = /^[A-Za-z]+$/;
 
 function addNormal() {
     document.getElementById("normalstate").pattern = "[a-zA-Z]+";
     normalInput = document.getElementById('normalstate').value;
-    if (normalInput == 'A' || normalStates.includes(normalInput) || !(normalInput.match(letters))) {
-        alert("Each new state has to be unique & an Alphabet");
+    let newnormal = normalInput.toUpperCase();
+    if (normalInput == 'A' || normalStates.includes(newnormal)) {
+        alert("Each new state has to be unique");
     }
     else {
         normalStates.push(normalInput);
@@ -37,7 +21,7 @@ let finalStates = [];
 
 function addFinal() {
     finalInput = document.getElementById('finalstate').value;
-    if (finalInput == 'A' || normalStates.includes(finalInput) || finalStates.includes(finalInput) || !(normalInput.match(letters))) {
+    if (finalInput == 'A' || normalStates.includes(finalInput) || finalStates.includes(finalInput)) {
         alert("Final state has to be unique");
     }
     else {
@@ -88,4 +72,3 @@ function addTransition() {
 
     }
 }
-
