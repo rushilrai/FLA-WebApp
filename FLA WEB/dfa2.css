@@ -75,6 +75,7 @@ height: 100vh;
     flex-direction: column;
 }
 .box2{
+  /* padding-top: 10%; */
     margin: 7em 1.2em 1.2em 1.2em;
     border: 3px solid #ffcccc;
     height: 80%;
