@@ -1,4 +1,4 @@
-# FLA Web Application Backend API
+# FLA Web Application
 
 API for simulating FA Models powering the F.L.A.P. Web App.
 
