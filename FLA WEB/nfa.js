@@ -1,11 +1,13 @@
 let normalInput;
 let normalStates = [];
+var letters = /^[A-Z]+$/;
 
-function addNormal() {
-    document.getElementById("normalstate").pattern = "[a-zA-Z]+";
+function addNormal() 
+{
     normalInput = document.getElementById('normalstate').value;
     let newnormal = normalInput.toUpperCase();
-    if (normalInput == 'A' || normalStates.includes(newnormal)) {
+    if (normalInput == 'A' || normalStates.includes(newnormal) || !(normalInput.match(letters)))
+     {
         alert("Each new state has to be unique");
     }
     else {
@@ -21,7 +23,8 @@ let finalStates = [];
 
 function addFinal() {
     finalInput = document.getElementById('finalstate').value;
-    if (finalInput == 'A' || normalStates.includes(finalInput) || finalStates.includes(finalInput)) {
+    if (finalInput == 'A' || normalStates.includes(finalInput) || finalStates.includes(finalInput) || !(finalInput.match(letters)))
+     {
         alert("Final state has to be unique");
     }
     else {
@@ -35,9 +38,6 @@ function addFinal() {
 
 let transitions = [];
 let transitionsCode = [];
-//A: [d]
-//A: d
-//A: e
 
 function addTransition() {
     startValid = false;

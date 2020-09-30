@@ -1,6 +1,6 @@
 let normalInput;
 let normalStates = [];
-var letters = /^[A-Za-z]+$/;
+var letters = /^[A-Z]+$/;
 
 function addNormal() {
     normalInput = document.getElementById('normalstate').value;
@@ -17,11 +17,11 @@ function addNormal() {
 
 let finalInput;
 let finalStates = [];
-
+var letters = /^[A-Z]+$/;
 function addFinal() {
     finalInput = document.getElementById('finalstate').value;
-    if (finalInput == 'A' || normalStates.includes(finalInput) || finalStates.includes(finalInput) || !(normalInput.match(letters))) {
-        alert("Final state has to be unique");
+    if (finalInput == 'A' || normalStates.includes(finalInput) || finalStates.includes(finalInput) || !(finalInput.match(letters))) {
+        alert("Final state has to be unique and only UPPERCASE letters");
     }
     else {
         finalStates.push(finalInput);
@@ -31,6 +31,27 @@ function addFinal() {
         console.log(finalStates);
     }
 }
+
+let inputString;
+let InputStates = [];
+var num = /^[0-1]+$/;
+function addInput(){
+        inputString = document.getElementById('stringvalue').value;
+        if(!(inputString.match(num))){
+            alert("Should be a string of 0's and 1's");
+        }
+        else{
+            InputStates.push(inputString);
+            console.log("Input String:");
+            console.log(InputStates);
+        }
+}
+
+
+
+
+
+
 
 let transitions = [];
 let transitionsCode = [];
