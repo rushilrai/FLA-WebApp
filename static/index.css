@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+#window1 {
+    font-family: 'Poppins';
+    width: 100%;
+    height: 100%;
+    background-color: #fcaeae;
+}
+
+#window2 {
+    font-family: 'Poppins';
+    width: 100%;
+    height: 100%;
+    background-color: #fcaeae;
+}

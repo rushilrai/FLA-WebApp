@@ -12,16 +12,7 @@ CORS(app, support_credentials=True)
 # default route | returns all endpoints
 @app.route('/')
 def defaultEndpoint():
-    defaultResponse = {
-        "all-endpoints": [
-            "GET /",
-            "POST /dfa",
-            "POST /nfa",
-            "GET /download-model",
-            "POST /upload-model"
-        ]
-    }
-    return jsonify(defaultResponse)
+    return render_template('index.html')
 
 # dfa route | returns string accepted by given model or not
 @app.route('/dfa', methods=['POST'])
@@ -57,4 +48,17 @@ def nfa():
 
 # app run
 if __name__ == '__main__':
-    app.run(debug=True)
+    # for hot reload and tracking static files and templates
+    from os import path, walk
+
+    extra_dirs = ['templates/', 'static/']
+    extra_files = extra_dirs[:]
+    for extra_dir in extra_dirs:
+        for dirname, dirs, files in walk(extra_dir):
+            for filename in files:
+                filename = path.join(dirname, filename)
+                if path.isfile(filename):
+                    extra_files.append(filename)
+
+    # flask app run
+    app.run(debug=True, extra_files=extra_files)
