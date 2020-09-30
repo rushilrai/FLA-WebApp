@@ -3,14 +3,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
-    <title>S.A.N.D.</title>
+    <title>sand.</title>
 </head>
-<body>
+<body style="background-color: #fcaeae;">
     <div id="window1">
-        sand
+        <div id="landing">
+            <span id="title">sand.</span>
+            <span id="subtitle"><u>S</u>imulation <u>A</u>pp for <u>N</u>FA & <u>D</u>FA</span>
+            <a href="#window2" style="text-decoration: none;">
+                <button class="lander">Simulate</button>
+            </a>
+            <button class="lander">Know More</button>
+        </div>
     </div>
     <div id="window2">
-        sand
+        <div class="card">
+            <span id="subtitle"><b>Deterministic Finite Automata</b></span>
+            DFA refers to Deterministic Finite Automaton. A Finite Automata (FA) is said to be
+            deterministic, if corresponding to an input symbol, there is single resultant state i.e.
+            there is only one transition.
+            <center>
+                <button class="redirect">
+                    Go to DFA
+                </button>
+            </center>
+        </div>  
+        <div class="card">
+            <span id="subtitle"><b>Non-Deterministic Finite Automata</b></span>
+            NFA refers to Nondeterministic Finite Automaton. A Finite Automata (FA) is said to be
+            non deterministic, if there is more than one possible transition from one state on the
+            same input symbol.
+            <center>
+                <button class="redirect">
+                    Go to NFA
+                </button>
+            </center>
+        </div>
+        </div>
     </div>
 </body>
 </html>
