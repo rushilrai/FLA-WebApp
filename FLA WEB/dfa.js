@@ -96,9 +96,30 @@ function addTransition() {
 }
 
 let apiTransitions;
+let transitionsObject = {};
 
 function convert() {
     var allKeys = normalStates;
     allKeys.unshift('A');
+    console.log(transitions);
     console.log(allKeys);
+    // i = 0;
+    // while (i < allKeys.length) {
+    var temp = [1,2];
+    for (let index = 0; index < transitions.length; index++) {
+        for (let j = 0; j < allKeys.length; j++) {
+            if (transitions[index][0] == allKeys[j]) {
+                if (transitions[index][1] == 0) {
+                    temp.unshift(transitions[index][2]);
+                }
+                else {
+                    temp.push(transitions[index][2]);
+                }
+                transitionsObject[transitions[index][0]] = [temp];
+            }
+        }
+    }
+    console.log(transitionsObject);
+    //   i++;
+    //  }
 }
