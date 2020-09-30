@@ -41,6 +41,7 @@ document.getElementById('initial').innerHTML = str_init;
 let inputString;
 let InputStates = [];
 var num = /^[0-1]+$/;
+<<<<<<< Updated upstream
 var input_str = "Input String is : ";
 function addInput(){
         inputString = document.getElementById('stringvalue').value;
@@ -56,6 +57,22 @@ function addInput(){
             document.getElementById('inputStringOutput').innerHTML = input_str + InputStates;
 
         }
+=======
+function addInput() {
+    inputString = document.getElementById('stringvalue').value;
+    if (!(inputString.match(num))) {
+        alert("Should be a string of 0's and 1's");
+    }
+    else {
+        InputStates.push(inputString);
+        console.log('Normal:');
+        console.log(normalStates);
+        console.log('Final');
+        console.log(finalStates);
+        console.log("Input String:");
+        console.log(InputStates);
+    }
+>>>>>>> Stashed changes
 }
 
 
@@ -104,15 +121,17 @@ function addTransition() {
 
 let apiTransitions;
 let transitionsObject = {};
+//A: [B, C]
 
 function convert() {
-    var allKeys = normalStates;
+    var allKeys = normalStates + finalStates;
+    console.log(allKeys);
     allKeys.unshift('A');
     console.log(transitions);
+    //A0B, A1C
     console.log(allKeys);
-    // i = 0;
-    // while (i < allKeys.length) {
-    var temp = [1,2];
+    //A, b, C
+    var temp = [];
     for (let index = 0; index < transitions.length; index++) {
         for (let j = 0; j < allKeys.length; j++) {
             if (transitions[index][0] == allKeys[j]) {
@@ -127,6 +146,4 @@ function convert() {
         }
     }
     console.log(transitionsObject);
-    //   i++;
-    //  }
 }
