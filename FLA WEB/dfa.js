@@ -1,40 +1,47 @@
 let normalInput;
 let normalStates = [];
-var letters = /^[A-Z]+$/;
+var letters = /^[a-zA-Z]+$/;
+var str_n = "Normal states consists of : ";
 
 function addNormal() {
     normalInput = document.getElementById('normalstate').value;
-    if (normalInput == 'A' || normalStates.includes(normalInput) || !(normalInput.match(letters))) {
+    newnormal = normalInput.toUpperCase();
+    if (newnormal == 'A' || normalStates.includes(newnormal) || !(newnormal.match(letters))) {
         alert("Each new state has to be Unique & an Alphabet");
     }
     else {
-        normalStates.push(normalInput);
-        console.log(normalStates);
+        normalStates.push(newnormal);
+        document.getElementById('normalOutput').innerHTML = str_n + normalStates;
     }
 
 }
-
 
 let finalInput;
 let finalStates = [];
-var letters = /^[A-Z]+$/;
+var letters = /^[a-zA-Z]+$/;
+var str_f = "Final states consists of : ";
 function addFinal() {
     finalInput = document.getElementById('finalstate').value;
-    if (finalInput == 'A' || normalStates.includes(finalInput) || finalStates.includes(finalInput) || !(finalInput.match(letters))) {
+    newfinal = finalInput.toUpperCase();
+    if (newfinal == 'A' || normalStates.includes(newfinal) || finalStates.includes(newfinal) || !(newfinal.match(letters))) {
         alert("Final state has to be UNIQUE from one another and only UPPERCASE letters");
     }
     else {
-        finalStates.push(finalInput);
-        console.log('Normal:');
-        console.log(normalStates);
-        console.log('Final');
-        console.log(finalStates);
+        finalStates.push(newfinal);
+        // console.log('Normal:');
+        // console.log(normalStates);
+        // console.log('Final');
+        document.getElementById('finalOutput').innerHTML = str_f +  finalStates + " ";
     }
 }
+
+let str_init = "A";
+document.getElementById('initial').innerHTML = str_init;
 
 let inputString;
 let InputStates = [];
 var num = /^[0-1]+$/;
+var input_str = "Input String is : ";
 function addInput(){
         inputString = document.getElementById('stringvalue').value;
         if(!(inputString.match(num))){
@@ -42,12 +49,12 @@ function addInput(){
         }
         else{
             InputStates.push(inputString);
-            console.log('Normal:');
-            console.log(normalStates);
-            console.log('Final');
-            console.log(finalStates);
-            console.log("Input String:");
-            console.log(InputStates);
+            // console.log('Normal:');
+            // console.log(normalStates);
+            // console.log('Final');
+            // console.log(finalStates);
+            document.getElementById('inputStringOutput').innerHTML = input_str + InputStates;
+
         }
 }
 
