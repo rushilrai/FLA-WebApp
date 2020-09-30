@@ -31,7 +31,7 @@ function addFinal() {
         // console.log('Normal:');
         // console.log(normalStates);
         // console.log('Final');
-        document.getElementById('finalOutput').innerHTML = str_f +  finalStates + " ";
+        document.getElementById('finalOutput').innerHTML = str_f +  finalStates;
     }
 }
 
