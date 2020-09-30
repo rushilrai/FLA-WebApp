@@ -236,12 +236,12 @@ input{
      margin-top: auto;
      margin-left: 8vh;
      font-family: "Open Sans", sans-serif;
-     color: #6d6d6d;
+     color: #ffa8a8;
    }
    input {
      height: 2em;
      padding: 5px 5px;
-     border: 3px solid #ffcccc;
+     border: 3px solid #6d6d6d;
      border-radius: 5px;
      outline: none;
      box-sizing: border-box;
@@ -283,20 +283,22 @@ input{
      margin-right: 10%;
      max-width: 70%;
    }
-   .api{
+   .api_n{
      border: 0px solid transparent;
      box-shadow: none;
+     border-radius: 1em;
    }
-   .api:hover {
- filter: brightness(140%);
+   .api_n:hover {
+ filter: brightness(90%);
  border: 0px solid transparent;
+ /* color: rgb(255, 255, 255); */
  box-shadow: none;
    }
-   .api:active {
+   .api_n:active {
      transform: translate(0, 0.3rem);
    }
    
-   .api:focus {
+   .api_n:focus {
      outline: none;
    }
    .form-group1{

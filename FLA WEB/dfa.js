@@ -5,7 +5,7 @@ var letters = /^[A-Z]+$/;
 function addNormal() {
     normalInput = document.getElementById('normalstate').value;
     if (normalInput == 'A' || normalStates.includes(normalInput) || !(normalInput.match(letters))) {
-        alert("Each new state has to be unique & an Alphabet");
+        alert("Each new state has to be Unique & an Alphabet");
     }
     else {
         normalStates.push(normalInput);
@@ -21,7 +21,7 @@ var letters = /^[A-Z]+$/;
 function addFinal() {
     finalInput = document.getElementById('finalstate').value;
     if (finalInput == 'A' || normalStates.includes(finalInput) || finalStates.includes(finalInput) || !(finalInput.match(letters))) {
-        alert("Final state has to be unique and only UPPERCASE letters");
+        alert("Final state has to be UNIQUE from one another and only UPPERCASE letters");
     }
     else {
         finalStates.push(finalInput);
@@ -42,6 +42,10 @@ function addInput(){
         }
         else{
             InputStates.push(inputString);
+            console.log('Normal:');
+            console.log(normalStates);
+            console.log('Final');
+            console.log(finalStates);
             console.log("Input String:");
             console.log(InputStates);
         }

@@ -76,7 +76,7 @@ height: 100vh;
 }
 .box2{
   /* padding-top: 10%; */
-    margin: 7em 1.2em 1.2em 1.2em;
+    margin: 7em 3em 3em 3em;
     border: 3px solid #ffcccc;
     height: 80%;
     overflow: hidden;
@@ -138,6 +138,7 @@ label {
   .api{
     border: 0px solid transparent;
     box-shadow: none;
+    border-radius: 1em;
   }
   .api:hover {
 filter: brightness(140%);
