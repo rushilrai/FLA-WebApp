@@ -15,8 +15,10 @@ def defaultEndpoint():
     return render_template('index.html')
 
 # dfa route | returns string accepted by given model or not
-@app.route('/dfa', methods=['POST'])
+@app.route('/dfa', methods=['GET', 'POST'])
 def dfa():
+    if request.method == 'GET':
+        return render_template('dfa.html')
     dfa_recv = request.json
     dfa = DFA(dfa_recv['model'])
     accepted = dfa.checkInput(dfa_recv['input'])
@@ -26,8 +28,10 @@ def dfa():
     return jsonify(dfaOutput)
 
 # nfa route | returns string accepted by given model or not
-@app.route('/nfa', methods=['POST'])
+@app.route('/nfa', methods=['GET', 'POST'])
 def nfa():
+    if request.method == 'GET':
+        return render_template('nfa.html')
     nfa_recv = request.json
     nfa = NFA(nfa_recv['model'])
     accepted = nfa.checkInput(nfa_recv['input'])

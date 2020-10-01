@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/konva@7.0.3/konva.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dfa.css') }}">
+    <title>sand.dfa</title>
+</head>
+<body style="background-color: #fcaeae;">
+    <div id="window2" style="background-color: #fcaeae;">
+        <div class='card control' style="background-color: whitesmoke;">
+            <ul style="margin-bottom: 75px;">
+                <li>Diagram must have exactly 1 initial state.</li>
+                <li>DFA should have exactly 1 transition for an input to a state.</li>
+                <li>Right-click on a state to add transition.</li>
+                <li>Click to select a state, then edit in the panel below</li>
+            </ul>
+            <center>
+                <button class="redirect dfa-btn">
+                    Initial State +
+                </button><br>
+                <button class="redirect dfa-btn">
+                    State +
+                </button><br>            
+                <button class="redirect dfa-btn">
+                    Final State +
+                </button><br>
+                <div id="edit-state">
+                    Edit State:
+                </div><input type="text" di>
+            </center>
+        </div>
+        <div class='card diagram' style="background-color: whitesmoke;">
+            <div id="container" style="width: 100%; height: 100%; background-color: whitesmoke;" onload="loadCanvas();"></div>
+            <script src="{{ url_for('static', filename='dfa.js') }}"></script>
+        </div>
+    </div>
+</body>
+</html>

@@ -23,9 +23,11 @@
             deterministic, if corresponding to an input symbol, there is single resultant state i.e.
             there is only one transition.
             <center>
-                <button class="redirect">
-                    Go to DFA
-                </button>
+                <a href="{{ url_for('dfa') }}">
+                    <button class="redirect">
+                        Go to DFA
+                    </button>
+                </a>
             </center>
         </div>  
         <div class="card">
@@ -34,9 +36,11 @@
             non deterministic, if there is more than one possible transition from one state on the
             same input symbol.
             <center>
-                <button class="redirect">
-                    Go to NFA
-                </button>
+                <a href="{{ url_for('nfa') }}">
+                    <button class="redirect">
+                        Go to NFA
+                    </button>
+                </a>
             </center>
         </div>
         </div>
