@@ -20,11 +20,13 @@ def dfa():
     if request.method == 'GET':
         return render_template('dfa.html')
     dfa_recv = request.json
+    print(dfa_recv)
     dfa = DFA(dfa_recv['model'])
     accepted = dfa.checkInput(dfa_recv['input'])
     dfaOutput = {
         "output": accepted
-    }
+    } 
+    print(dfaOutput)
     return jsonify(dfaOutput)
 
 # nfa route | returns string accepted by given model or not
@@ -40,15 +42,9 @@ def nfa():
     }
     return jsonify(dfaOutput)
 
-# # download automata models
-# @app.route('/download-model', methods=['POST'])
-# def downloadModel():
-#     return None
-
-# # upload ext models
-# @app.route('/upload-model', methods=['POST'])
-# def uploadModel():
-#     return None
+@app.route('/more', methods=['GET'])
+def know_more():
+    return render_template('know_more.html')
 
 # app run
 if __name__ == '__main__':

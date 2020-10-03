@@ -10,29 +10,32 @@
 <body style="background-color: #fcaeae;">
     <div id="window2" style="background-color: #fcaeae;">
         <div class='card control' style="background-color: whitesmoke;">
-            <ul style="margin-bottom: 75px;">
+            <ul style="margin-bottom: 20px;">
                 <li>Diagram must have exactly 1 initial state.</li>
                 <li>DFA should have exactly 1 transition for an input to a state.</li>
                 <li>Right-click on a state to add transition.</li>
                 <li>Click to select a state, then edit in the panel below</li>
             </ul>
             <center>
-                <button class="redirect dfa-btn">
-                    Initial State +
+                <button class="redirect dfa-btn" onclick="newInput()">
+                    Inputs +
                 </button><br>
-                <button class="redirect dfa-btn">
+                <button class="redirect dfa-btn" onclick="newState()">
                     State +
-                </button><br>            
-                <button class="redirect dfa-btn">
-                    Final State +
                 </button><br>
-                <div id="edit-state">
-                    Edit State:
-                </div><input type="text" di>
+                <input type="text" id="inp-string" placeholder="Test Input String"><br>
+                <button class="redirect dfa-btn" onclick="checkString()">
+                    Check String
+                </button><br>
             </center>
         </div>
         <div class='card diagram' style="background-color: whitesmoke;">
-            <div id="container" style="width: 100%; height: 100%; background-color: whitesmoke;" onload="loadCanvas();"></div>
+            <table id="transition-table" style="margin: auto;">
+                <tr id="tINPUT"><th>
+                        &nbsp;
+                    </th><th contenteditable="true" onkeydown="noEnter(event);">
+                        0
+                    </th></tr><tr id="tSTATE" class="tSTATE"><td contenteditable="true" onkeydown="noEnter(event);" class="thisState">A</td><td contenteditable="true" onkeydown="noEnter(event);" class="thisState"></td></tr></table>
             <script src="{{ url_for('static', filename='dfa.js') }}"></script>
         </div>
     </div>
