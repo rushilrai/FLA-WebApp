@@ -1,108 +1,110 @@
-function loadCanvas() {
-    wd = 0.55 * parseInt(screen.width);
-    ht = 600;
-    console.log(wd, ht);
-
-    // first we need to create a stage
-    var stage = new Konva.Stage({
-        container: 'container',   // id of container <div>
-        width: 800,
-        height: 600
-    });
-
-    // then create layer
-    var layer = new Konva.Layer();
-    var stateA = drawState('A', stage);
-    var stateB = drawState('B', stage);
-    var stateC = drawState('C', stage);
-    layer.add(stateA);
-    layer.add(stateB);
-    layer.add(stateC);
-    layer.add(drawTransition(stateA, stateB, stage));
-    layer.add(drawTransition(stateB, stateA, stage));
-    layer.add(drawTransition(stateB, stateC, stage));
-    var stateA = drawState('A', stage);
-    var stateB = drawState('B', stage);
-    var stateC = drawState('C', stage);
-    layer.add(stateA);
-    layer.add(stateB);
-    layer.add(stateC);
-    layer.add(drawTransition(stateA, stateB, stage));
-    layer.add(drawTransition(stateB, stateA, stage));
-    layer.add(drawTransition(stateB, stateC, stage));
-    stage.add(layer);
-    layer.draw();
+function noEnter(event) {
+    if (event.keyCode == 13) {
+        event.preventDefault();
+    }
 }
 
-function drawState(label_text, stage) {
-    var state = new Konva.Group({
-        x: Math.random() * stage.width(),
-        y: Math.random() * stage.height(),
-        draggable: true
-    });
+function newInput() {
+    var tINPUT = document.getElementById('tINPUT');
+    var newInput = document.createElement('th');
+    newInput.contentEditable = 'true';
+    newInput.addEventListener('keydown', (event) => noEnter(event));
+    newInput.innerHTML = " ";
+    tINPUT.appendChild(newInput);
 
-    // create our shape
-    var circle = new Konva.Circle({
-        x: 0,
-        y: 0,
-        radius: 30,
-        fill: 'whitesmoke',
-        stroke: '#333333',
-        strokeWidth: 4,
-    });
-
-    // create default state
-    var label = new Konva.Text({
-        x: -10,
-        y: -12.5,
-        text: label_text,
-        fontSize: 30,
-        fontFamily: 'Poppins',
-        fill: '#333333'
-    })
-
-    state.add(circle);
-    state.add(label);
-    return state;
+    var allStates = document.getElementById('transition-table').childNodes[1].childNodes;
+    // console.log(allStates);
+    for (var i = 1; i < allStates.length; i++) {
+        var newTrans = document.createElement('td');
+        newTrans.contentEditable = 'true';
+        newTrans.addEventListener('keydown', (event) => noEnter(event));
+        allStates[i].appendChild(newTrans);
+    }
 }
 
-function getConnectorPoints(from, to) {
-    const dx = to.x - from.x;
-    const dy = to.y - from.y;
-    let angle = Math.atan2(-dy, dx);
+function newState() {
+    var tTABLE = document.getElementById('transition-table').childNodes[1];
+    var newStateRow = document.createElement('tr');
+    newStateRow.id = 'tSTATE';
+    newStateRow.className = 'tSTATE';
 
-    const radius = 50;
-
-    return [
-      from.x + -radius * Math.cos(angle + Math.PI),
-      from.y + radius * Math.sin(angle + Math.PI),
-      to.x + -radius * Math.cos(angle),
-      to.y + radius * Math.sin(angle)
-    ];
-}
-function drawTransition(stateA, stateB, stage) {
-    var pts = getConnectorPoints(stateA.absolutePosition(), stateB.absolutePosition());
-
-    var arrow = new Konva.Arrow({
-        points: pts,
-        pointerLength: 20,
-        pointerWidth: 20,
-        fill: 'black',
-        stroke: 'black',
-        strokeWidth: 4,
-    });
-
-    stateA.on('dragmove', () => {
-        var new_pts = getConnectorPoints(stateA.absolutePosition(), stateB.absolutePosition());
-        arrow.points(new_pts);
-    })
-
-    stateB.on('dragmove', () => {
-        var new_pts = getConnectorPoints(stateA.absolutePosition(), stateB.absolutePosition());
-        arrow.points(new_pts);
-    })
-
-    return arrow;
+    var allInputs = document.getElementById('tINPUT').childNodes;
+    for (var i = 0; i < allInputs.length; i++) {
+        var newState = document.createElement('td');
+        newState.contentEditable = 'true';
+        newState.addEventListener('keydown', (event) => noEnter(event));
+        newState.innerHTML = " "
+        newStateRow.appendChild(newState);
+    }
+    tTABLE.appendChild(newStateRow);
 }
 
-loadCanvas();
+function buildModel() {
+    var dfa = {
+        "model": {
+            "inputs": [],
+            "inputstate": "",
+            "finalstates": [],
+            "transit-table": {}
+        },
+        "input": (document.getElementById('inp-string').value).toString()
+    };
+
+    var allInputs = document.getElementsByTagName('th');
+    for (var i = 1; i < allInputs.length; i++) {
+        dfa.model['inputs'].push(allInputs[i].innerText);
+    }
+
+    var allStates = document.getElementsByClassName('tSTATE');
+    // console.log(allStates.length);
+    for (var i = 0; i < allStates.length; i++) {
+        if (allStates[i].childNodes[0].innerText[0] == ">") {
+            dfa.model["transit-table"][allStates[i].childNodes[0].innerText.slice(1, )] = [];
+            dfa.model['inputstate'] = allStates[i].childNodes[0].innerText.slice(1, );
+            for (var j = 1; j < allStates[i].childNodes.length; j++) {
+                dfa.model["transit-table"][allStates[i].childNodes[0].innerText.slice(1, )].push(allStates[i].childNodes[j].innerText)
+            }
+        } else if (allStates[i].childNodes[0].innerText[0] == "*") {
+            dfa.model["transit-table"][allStates[i].childNodes[0].innerText.slice(1, )] = [];
+            dfa.model['finalstates'].push(allStates[i].childNodes[0].innerText.slice(1, ));
+            for (var j = 1; j < allStates[i].childNodes.length; j++) {
+                dfa.model["transit-table"][allStates[i].childNodes[0].innerText.slice(1, )].push(allStates[i].childNodes[j].innerText)
+            }
+        } else {
+            dfa.model["transit-table"][allStates[i].childNodes[0].innerText] = [];
+            for (var j = 1; j < allStates[i].childNodes.length; j++) {
+                dfa.model["transit-table"][allStates[i].childNodes[0].innerText].push(allStates[i].childNodes[j].innerText)
+            }
+        }
+
+    }
+    // console.log(dfaReq);
+    return dfa;
+}
+
+function checkString() {
+    var dfaReq = buildModel();
+    // console.log(dfaReq);
+
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: JSON.stringify(dfaReq),
+    };
+
+    fetch("http://localhost:5000/dfa", requestOptions)
+        .then(response => response.json())
+        .then(result => displayResult(result))
+        .catch(error => console.log('error', error));
+}
+
+function displayResult(_json) {
+    if (_json.output) {
+        alert('String Accepted');
+    } else {
+        alert('String Rejected');
+    }
+}
