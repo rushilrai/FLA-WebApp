@@ -1,6 +1,12 @@
-# FLA Web Application
+# ![](https://github.com/mihirs16/FLA-WebApp/blob/master/static/assets/favicon-32x32.png) sand.
 
-API for simulating FA Models powering the F.L.A.P. Web App.
+**S**imulation **A**pp for **N**FA and **D**FA is an Open-source web application 
+that allows a user to build the transition table for any DFA or NFA Automaton and check if a 
+given string is accepted or rejected by that model.
+
+![](https://img.shields.io/github/issues/rushilrai/FLA-WebApp?color=red&style=for-the-badge)
+![](https://img.shields.io/github/issues-closed/rushilrai/FLA-WebApp?color=green&style=for-the-badge)
+![](https://img.shields.io/github/issues-pr-closed/rushilrai/FLA-WebApp?color=blue&style=for-the-badge)
 
 ## Getting Started
 
@@ -9,14 +15,6 @@ API for simulating FA Models powering the F.L.A.P. Web App.
 
 ```bash
 git clone https://github.com/:username/FLA-WebApp
-```
-
-### Flask Backend
-
-* To run the Flask-based backend API change directory to `server-api`.
-
-```bash
-cd server-api
 ```
 
 * Install all `pip` libraries.
@@ -38,3 +36,6 @@ python app.py
 * The API is capable of simulating FA Models (currently NFA and DFA).
 * The schema and rules for each FA Model can be found at [FA_SCHEMA.md](https://github.com/rushilrai/FLA-WebApp/blob/master/FA_SCHEMA.md).
 * The input schema for requests to the API can be found at [API_SCHEMA.md](https://github.com/rushilrai/FLA-WebApp/blob/master/API_SCHEMA.md).
+
+---
+If you found this repo cool and/or useful, please ⭐ the repo. If you want to contribute, go ahead and 🍴 it!
