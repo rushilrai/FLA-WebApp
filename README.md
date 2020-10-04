@@ -4,6 +4,10 @@
 that allows a user to build the transition table for any DFA or NFA Automaton and check if a 
 given string is accepted or rejected by that model.
 
+![](https://img.shields.io/github/issues/rushilrai/FLA-WebApp?color=red&style=for-the-badge)
+![](https://img.shields.io/github/issues-closed/rushilrai/FLA-WebApp?color=green&style=for-the-badge)
+![](https://img.shields.io/github/issues-pr-closed/rushilrai/FLA-WebApp?color=blue&style=for-the-badge)
+
 ## Getting Started
 
 * Fork this repository
@@ -32,3 +36,6 @@ python app.py
 * The API is capable of simulating FA Models (currently NFA and DFA).
 * The schema and rules for each FA Model can be found at [FA_SCHEMA.md](https://github.com/rushilrai/FLA-WebApp/blob/master/FA_SCHEMA.md).
 * The input schema for requests to the API can be found at [API_SCHEMA.md](https://github.com/rushilrai/FLA-WebApp/blob/master/API_SCHEMA.md).
+
+---
+If you found this repo cool and/or useful, please ⭐ the repo. If you want to contribute, go ahead and 🍴 it!
