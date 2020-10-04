@@ -42,6 +42,7 @@ def nfa():
     }
     return jsonify(dfaOutput)
 
+# know more page for team and project info
 @app.route('/more', methods=['GET'])
 def know_more():
     return render_template('know_more.html')
