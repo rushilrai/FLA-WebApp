@@ -95,7 +95,7 @@ function checkString() {
         body: JSON.stringify(dfaReq),
     };
 
-    fetch("http://localhost:5000/dfa", requestOptions)
+    fetch("https://sand-fla.azurewebsites.net/dfa", requestOptions)
         .then(response => response.json())
         .then(result => displayResult(result))
         .catch(error => displayError());
