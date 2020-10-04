@@ -2,9 +2,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fa.css') }}">
     <title>sand.nfa</title>
 </head>
-<body>
-    
+<body style="background-color: #fcaeae;">
+    <div id="window2" style="background-color: #fcaeae;">
+        <div class='card control' style="background-color: whitesmoke;">
+            <ul style="margin-bottom: 20px;">
+                <li>Initial state can be marked by <span style="font-size: larger;">></span></li>
+                <li>Diagram must have exactly 1 initial state.</li>
+                <li>NFA can have 0 or multiple transitions for an input to a state.</li>
+                <li>Final state can be marked as <span style="font-size: larger;">*</span></li>
+                <li>Right-click on a state to add transition.</li>
+            </ul>
+            <center>
+                <button class="redirect dfa-btn" onclick="newInput()">
+                    Inputs +
+                </button><br>
+                <button class="redirect dfa-btn" onclick="newState()">
+                    State +
+                </button><br>
+                <input type="text" id="inp-string" placeholder="Test Input String"><br>
+                <button class="redirect dfa-btn" onclick="checkString()">
+                    Check String
+                </button><br>
+                <div id="retr" style="display: none; margin-top: 15px;">
+                    String: <span id="result" style="font-weight: 500;"></span>
+                </div>
+            </center>
+        </div>
+        <div class='card diagram' style="background-color: whitesmoke;">
+            <table id="transition-table" style="margin: auto;">
+                <tr id="tINPUT"><th>
+                        &nbsp;
+                    </th><th contenteditable="true" onkeydown="noEnter(event);">
+                        0
+                    </th></tr><tr id="tSTATE" class="tSTATE"><td contenteditable="true" onkeydown="noEnter(event);" class="thisState">A</td><td contenteditable="true" onkeydown="noEnter(event);" class="thisState"></td></tr></table>
+            <script src="{{ url_for('static', filename='nfa.js') }}"></script>
+        </div>
+    </div>
 </body>
 </html>

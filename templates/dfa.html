@@ -2,19 +2,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/konva@7.0.3/konva.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='dfa.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fa.css') }}">
     <title>sand.dfa</title>
 </head>
 <body style="background-color: #fcaeae;">
     <div id="window2" style="background-color: #fcaeae;">
         <div class='card control' style="background-color: whitesmoke;">
             <ul style="margin-bottom: 20px;">
+                <li>Initial state can be marked by <span style="font-size: larger;">></span></li>
                 <li>Diagram must have exactly 1 initial state.</li>
                 <li>DFA should have exactly 1 transition for an input to a state.</li>
+                <li>Final state can be marked as <span style="font-size: larger;">*</span></li>
                 <li>Right-click on a state to add transition.</li>
-                <li>Click to select a state, then edit in the panel below</li>
             </ul>
             <center>
                 <button class="redirect dfa-btn" onclick="newInput()">
@@ -27,6 +27,9 @@
                 <button class="redirect dfa-btn" onclick="checkString()">
                     Check String
                 </button><br>
+                <div id="retr" style="display: none; margin-top: 15px;">
+                    String: <span id="result" style="font-weight: 500;"></span>
+                </div>
             </center>
         </div>
         <div class='card diagram' style="background-color: whitesmoke;">

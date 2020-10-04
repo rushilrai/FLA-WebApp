@@ -62,18 +62,24 @@ function buildModel() {
             dfa.model["transit-table"][allStates[i].childNodes[0].innerText.slice(1, )] = [];
             dfa.model['inputstate'] = allStates[i].childNodes[0].innerText.slice(1, );
             for (var j = 1; j < allStates[i].childNodes.length; j++) {
-                dfa.model["transit-table"][allStates[i].childNodes[0].innerText.slice(1, )].push(allStates[i].childNodes[j].innerText)
+                var thisState = allStates[i].childNodes[j].innerText;
+                thisState = thisState.split(", ");
+                dfa.model["transit-table"][allStates[i].childNodes[0].innerText.slice(1, )].push(thisState)
             }
         } else if (allStates[i].childNodes[0].innerText[0] == "*") {
             dfa.model["transit-table"][allStates[i].childNodes[0].innerText.slice(1, )] = [];
             dfa.model['finalstates'].push(allStates[i].childNodes[0].innerText.slice(1, ));
             for (var j = 1; j < allStates[i].childNodes.length; j++) {
-                dfa.model["transit-table"][allStates[i].childNodes[0].innerText.slice(1, )].push(allStates[i].childNodes[j].innerText)
+                var thisState = allStates[i].childNodes[j].innerText;
+                thisState = thisState.split(", ");
+                dfa.model["transit-table"][allStates[i].childNodes[0].innerText.slice(1, )].push(thisState)
             }
         } else {
             dfa.model["transit-table"][allStates[i].childNodes[0].innerText] = [];
             for (var j = 1; j < allStates[i].childNodes.length; j++) {
-                dfa.model["transit-table"][allStates[i].childNodes[0].innerText].push(allStates[i].childNodes[j].innerText)
+                var thisState = allStates[i].childNodes[j].innerText;
+                thisState = thisState.split(", ");
+                dfa.model["transit-table"][allStates[i].childNodes[0].innerText].push(thisState);
             }
         }
 
@@ -84,7 +90,7 @@ function buildModel() {
 
 function checkString() {
     var dfaReq = buildModel();
-    // console.log(dfaReq);
+    console.log(dfaReq);
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -95,7 +101,7 @@ function checkString() {
         body: JSON.stringify(dfaReq),
     };
 
-    fetch("http://localhost:5000/dfa", requestOptions)
+    fetch("http://localhost:5000/nfa", requestOptions)
         .then(response => response.json())
         .then(result => displayResult(result))
         .catch(error => displayError());
