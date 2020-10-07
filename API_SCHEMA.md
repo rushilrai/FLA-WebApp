@@ -1,19 +1,5 @@
 # Schema for Server API Endpoints
 
-## GET /
-
-* Returns all available endpoints
-
-```json
-{
-    "all-endpoints": [
-        "GET /",
-        "POST /dfa",
-        "POST /nfa"
-    ]
-}
-```
-
 ## POST /dfa
 
 * Takes [DFA Model](https://github.com/rushilrai/FLA-WebApp/blob/master/SCHEMA.md#dfa-schema) and example input string as parameters
