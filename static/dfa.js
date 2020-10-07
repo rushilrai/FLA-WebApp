@@ -1,9 +1,11 @@
+// prevent next line edits for transition table cells
 function noEnter(event) {
     if (event.keyCode == 13) {
         event.preventDefault();
     }
 }
 
+// add new input to transition table
 function newInput() {
     var tINPUT = document.getElementById('tINPUT');
     var newInput = document.createElement('th');
@@ -13,7 +15,6 @@ function newInput() {
     tINPUT.appendChild(newInput);
 
     var allStates = document.getElementById('transition-table').childNodes[1].childNodes;
-    // console.log(allStates);
     for (var i = 1; i < allStates.length; i++) {
         var newTrans = document.createElement('td');
         newTrans.contentEditable = 'true';
@@ -22,6 +23,7 @@ function newInput() {
     }
 }
 
+// add new state to transition table
 function newState() {
     var tTABLE = document.getElementById('transition-table').childNodes[1];
     var newStateRow = document.createElement('tr');
@@ -39,6 +41,7 @@ function newState() {
     tTABLE.appendChild(newStateRow);
 }
 
+// build FA model from transition table
 function buildModel() {
     var dfa = {
         "model": {
@@ -56,7 +59,6 @@ function buildModel() {
     }
 
     var allStates = document.getElementsByClassName('tSTATE');
-    // console.log(allStates.length);
     for (var i = 0; i < allStates.length; i++) {
         if (allStates[i].childNodes[0].innerText[0] == ">") {
             dfa.model["transit-table"][allStates[i].childNodes[0].innerText.slice(1, )] = [];
@@ -78,13 +80,12 @@ function buildModel() {
         }
 
     }
-    // console.log(dfaReq);
     return dfa;
 }
 
+// build FA Model check string through API 
 function checkString() {
     var dfaReq = buildModel();
-    // console.log(dfaReq);
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -101,11 +102,13 @@ function checkString() {
         .catch(error => displayError());
 }
 
+// display error in result from API
 function displayError() {
     document.getElementById('result').innerText = 'Error Model';
     document.getElementById('retr').style.display = 'inline-block';
 }
 
+// display successful result from API
 function displayResult(_json) {
     if (_json.output) {
         res = 'Accepted';
@@ -115,5 +118,4 @@ function displayResult(_json) {
 
     document.getElementById('result').innerText = res;
     document.getElementById('retr').style.display = 'inline-block';
-
 }
